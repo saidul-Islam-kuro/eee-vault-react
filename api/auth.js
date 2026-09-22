@@ -1,4 +1,3 @@
-// api/auth.js
 export default async function handler(req, res) {
   const { code } = req.query;
 
@@ -13,13 +12,18 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "GitHub OAuth env vars missing" });
   }
 
-  const redirectUri = `https://${process.env.VERCEL_URL || "your-app.vercel.app"}/api/auth`;
+  const host = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://eee-vault-jstu.vercel.app";
+
+  const redirectUri = `${host}/api/auth`;
 
   const tokenRes = await fetch("https://github.com/login/oauth/access_token", {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      "User-Agent": "eee-vault-cms",
     },
     body: JSON.stringify({
       client_id: clientId,
@@ -32,13 +36,14 @@ export default async function handler(req, res) {
   const tokenData = await tokenRes.json();
 
   if (!tokenData.access_token) {
-    return res.status(401).json({ error: "GitHub auth failed" });
+    return res.status(401).json({ error: "GitHub auth failed", details: tokenData });
   }
 
   const userRes = await fetch("https://api.github.com/user", {
     headers: {
       Authorization: `Bearer ${tokenData.access_token}`,
       "User-Agent": "eee-vault-cms",
+      Accept: "application/vnd.github+json",
     },
   });
 
