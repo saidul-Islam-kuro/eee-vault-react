@@ -15,12 +15,11 @@
     </style>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      if (window.CMS) {
-        window.CMS.registerPreviewStyle("/admin/admin-preview.css");
-        window.CMS.init();
-      }
+      window.CMS_MANUAL_INIT = false;
+      window.CMS = window.CMS || {};
+      window.CMS.registerPreviewStyle("/admin/admin-preview.css");
     </script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
