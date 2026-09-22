@@ -37,6 +37,7 @@ export default function ViewerPage() {
       confirmLabel: "Start",
       confirmTone: "green",
       onConfirm: async () => {
+        confirmDialog.close();
         setIsCompiling(true);
         try {
           await compilePagesToPdf(pages, title);

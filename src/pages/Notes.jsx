@@ -39,7 +39,10 @@ export default function Notes() {
       message: note.name,
       confirmLabel: "Download",
       confirmTone: "red",
-      onConfirm: () => triggerDownload(note.url, `${note.name}.pdf`),
+      onConfirm: () => {
+        confirmDialog.close();
+        triggerDownload(note.url, `${note.name}.pdf`);
+      },
     });
   }
 

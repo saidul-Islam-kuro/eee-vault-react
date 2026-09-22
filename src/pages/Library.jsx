@@ -32,7 +32,10 @@ export default function Library() {
       message: `${book.title}${book.edition ? ` — ${book.edition}` : ""}`,
       confirmLabel: "Download",
       confirmTone: "red",
-      onConfirm: () => triggerDownload(book.url, `${book.title}.pdf`),
+      onConfirm: () => {
+        confirmDialog.close();
+        triggerDownload(book.url, `${book.title}.pdf`);
+      },
     });
   }
 
