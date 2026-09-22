@@ -1,24 +1,34 @@
+const GITHUB_AUTHORIZE_URL = "https://github.com/login/oauth/authorize";
+const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
+
+// Must exactly match the "Authorization callback URL" registered on
+// the GitHub OAuth App — no trailing slash, no VERCEL_URL guessing.
+const SITE_URL = "https://eee-vault-jstu.vercel.app";
+const REDIRECT_URI = `${SITE_URL}/api/auth`;
+
 export default async function handler(req, res) {
-  const { code } = req.query;
-
-  if (!code) {
-    return res.status(400).json({ error: "Missing GitHub code" });
-  }
-
+  const { code, error: githubError } = req.query;
   const clientId = process.env.GITHUB_CLIENT_ID;
   const clientSecret = process.env.GITHUB_CLIENT_SECRET;
 
   if (!clientId || !clientSecret) {
-    return res.status(500).json({ error: "GitHub OAuth env vars missing" });
+    return res.status(500).send("Missing GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET env vars.");
   }
 
-  const host = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "https://eee-vault-jstu.vercel.app";
+  // Leg 1: popup just opened, no `code` yet -> send the user to GitHub.
+  if (!code) {
+    if (githubError) {
+      return res.status(400).send(`GitHub authorization error: ${githubError}`);
+    }
+    const authorizeUrl = new URL(GITHUB_AUTHORIZE_URL);
+    authorizeUrl.searchParams.set("client_id", clientId);
+    authorizeUrl.searchParams.set("redirect_uri", REDIRECT_URI);
+    authorizeUrl.searchParams.set("scope", "repo,user");
+    return res.redirect(302, authorizeUrl.toString());
+  }
 
-  const redirectUri = `${host}/api/auth`;
-
-  const tokenRes = await fetch("https://github.com/login/oauth/access_token", {
+  // Leg 2: GitHub redirected back with a `code` -> exchange it for a token.
+  const tokenRes = await fetch(GITHUB_TOKEN_URL, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -29,29 +39,42 @@ export default async function handler(req, res) {
       client_id: clientId,
       client_secret: clientSecret,
       code,
-      redirect_uri: redirectUri,
+      redirect_uri: REDIRECT_URI,
     }),
   });
 
   const tokenData = await tokenRes.json();
 
   if (!tokenData.access_token) {
-    return res.status(401).json({ error: "GitHub auth failed", details: tokenData });
+    return respondToPopup(res, "error", {
+      message: tokenData.error_description || "GitHub auth failed",
+    });
   }
 
-  const userRes = await fetch("https://api.github.com/user", {
-    headers: {
-      Authorization: `Bearer ${tokenData.access_token}`,
-      "User-Agent": "eee-vault-cms",
-      Accept: "application/vnd.github+json",
-    },
-  });
-
-  const user = await userRes.json();
-
-  return res.status(200).json({
+  return respondToPopup(res, "success", {
     token: tokenData.access_token,
     provider: "github",
-    user,
   });
+}
+
+// Decap CMS listens for a postMessage from this popup, in the exact
+// format "authorization:github:success:<json>" (or "...:error:<json>").
+// It does a little handshake first: the popup pings the opener, the
+// opener acks, then the popup sends the real payload.
+function respondToPopup(res, status, payload) {
+  const message = `authorization:github:${status}:${JSON.stringify(payload)}`;
+  res.setHeader("Content-Type", "text/html");
+  res.status(200).send(`<!doctype html>
+<html><body>
+<script>
+  (function () {
+    function receiveMessage(e) {
+      window.opener.postMessage(${JSON.stringify(message)}, e.origin);
+      window.removeEventListener("message", receiveMessage, false);
+    }
+    window.addEventListener("message", receiveMessage, false);
+    window.opener.postMessage("authorizing:github", "*");
+  })();
+</script>
+</body></html>`);
 }
