@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: KURO-RGBN/EEE-QUESTION-BANK-JSTU
+  branch: main
+  base_url: https://eeevaultjstu.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: "admin/uploads"
+public_folder: "/admin/uploads"
+
+collections:
+  - name: "vault"
+    label: "Vault"
+    files:
+      - file: "data.json"
+        label: "course Data"
+        name: "data"
+        fields:
+          - name: "Course"
+            label: "Courses"
+            widget: "list"
+            summary: "{{fields.semester}} | {{fields.title}} ({{fields.code}})"
+            fields:
+              - {name: "semester", label: "Semester", widget: "string"}
+              - {name: "title", label: "Course Title", widget: "string"}
+              - {name: "code", label: "Course Code", widget: "string"}
+              - name: "links"
+                label: "Session Links"
+                widget: "object"
+                fields:
+                  - {name: "20-21", label: "Session 20-21", widget: "list"}
+                  - {name: "21-22", label: "Session 21-22", widget: "list"}
+                  - {name: "22-23", label: "Session 22-23", widget: "list"}
+                  - {name: "23-24", label: "Session 23-24", widget: "list"}
+                  - {name: "24-25", label: "Session 24-25", widget: "list"}
+              - name: "notes"
+                label: "Course Notes"
+                widget: "list"
+                fields:
+                  - {name: "name", label: "Note Name", widget: "string"}
+                  - {name: "url", label: "URL", widget: "string"}
+          - name: "Library"
+            label: "Library Books"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.author}}"
+            fields:
+              - {name: "id", label: "ID", widget: "string"}
+              - {name: "title", label: "Title", widget: "string"}
+              - {name: "author", label: "Author", widget: "string"}
+              - {name: "edition", label: "Edition", widget: "string", required: false}
+              - {name: "category", label: "Category", widget: "string", required: false}
+              - {name: "url", label: "URL", widget: "string"}

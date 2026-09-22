@@ -1,0 +1,942 @@
+{
+  "Course": [
+    {
+      "semester": "1st Year 1st Semester",
+      "title": "Electrical Circuit I",
+      "code": "EEE 1111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Circuit-1-p1.png",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Circuit-1-p2.png"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/circiut-1-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/circiut-1-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/circiut-1-p3.jpeg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit-I_p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit-I_p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit-I_p3.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electrical%20Circuit-I_p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electrical%20Circuit-I_p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electrical%20Circuit-I_p3.jpg"
+        ],
+        "24-25": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/eee1111p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/eee1111p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/eee1111p3.jpeg"
+        ]
+      },
+      "notes": [
+        {
+          "name": "Electric Circuits -Alexander 7th edition",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/Copy%20of%20Electric%20Circuits%20-Alexander%207th%20edition-%20(1).pdf"
+        },
+        {
+          "name": "S-1 Alternating current circuits",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-1%20Alternating%20current%20circuits.pdf"
+        },
+        {
+          "name": "S-2 Lag lead phasor",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-2%20Lag%20lead%20phasor.pdf"
+        },
+        {
+          "name": "S-1 Voltage, Current",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-1%20Voltage%2C%20Current.pdf"
+        },
+        {
+          "name": "S-2 Nodal, Mesh Analysis, Star delta",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-2%20Nodal%2C%20Mesh%20Analysis%2C%20Star%20delta.pdf"
+        },
+        {
+          "name": "S-3 Superposition and Maximum Power Theorem",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-3%20Superposition%20and%20Maximum%20Power%20Theorem.pdf"
+        },
+        {
+          "name": "S-4 Source Transformation",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-4%20Source%20Transformation.pdf"
+        },
+        {
+          "name": "S-5 Thevenin, Norton Theorem.pdf",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-5%20Thevenin%2C%20Norton%20Theorem.pdf"
+        },
+        {
+          "name": "S-6 C-4 Magnetic Quantities & Magnetization Curve",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-6%20C-4%20Magnetic%20Quantities%20%26%20Magnetization%20Curve.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 1st Semester",
+      "title": "Technical and Communicative English",
+      "code": "HUM 1111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/english-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/english-p2.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/eng-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/eng-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/eng-p3.jpeg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/eng-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/eng-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/eng-p3.jpeg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/eng-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/eng-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/eng-p3.jpeg"
+        ],
+        "24-25": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/hum-1111p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/hum1111p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/hum1111p3.jpeg"
+        ]
+      },
+      "notes": [
+        {
+          "name": "TRANSFORMATION SENTENCE, CONDITIONAL",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/transformation%20sentence%20%26%20condition%20al.pdf"
+        },
+        {
+          "name": "ENGLISH NOTES",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/English_Note.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 1st Semester",
+      "title": "Differential and Integral Calculus",
+      "code": "MATH 1111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/math1111-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/math1111-p2.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/math1111-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/math1111-p2.jpeg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Differential%20and%20integral%20calculas_p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Differential%20and%20integral%20calculas_p2.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/math1111-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/math1111-p2.jpeg"
+        ],
+        "24-25": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/math1111p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/math1111p2.jpeg"
+        ]
+      },
+      "notes": [
+        {
+          "name": "Shahjalal sir slide(24-25)",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/Math-1111-Shahjalal%20sir_Slide.pdf"
+        },
+        {
+          "name": "Math-1111-CT(24-25)",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/Math-1111CT.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 1st Semester",
+      "title": "Physics",
+      "code": "PHY 1111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/physics-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/physics-p2.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/physics1111p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/phy1111p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/phy-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/phy-p2.jpeg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Physics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Physics-p2.jpg"
+        ],
+        "24-25": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/phy1111p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/phy1111p2.jpeg"
+        ]
+      },
+      "notes": [
+        {
+          "name": "physics lecture note(24-25)",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-1/physics%20lecture%20note.pdf"
+        },
+        {
+          "name": "Physics Lab quiz & CT(24-25)",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/Physics-1111-Lab%20Quiz%20%26%20CT.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 1st Semester",
+      "title": "Computer Programming",
+      "code": "CSE 1111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/cse-p1.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/cse-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/cse-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/cse-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/cse-p4.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/cse-p5.jpeg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Computer%20Fundamental%20and%20Programming-P1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Computer%20Fundamental%20and%20Programming-P2.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Computer%20Fundamental%20and%20Programming-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Computer%20Fundamental%20and%20Programming-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Computer%20Fundamental%20and%20Programming-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Computer%20Fundamental%20and%20Programming-p4.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Computer%20Fundamental%20and%20Programming-p5.jpg"
+        ],
+        "24-25": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/cse1111p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/cse1111p2.jpeg"
+        ]
+      },
+      "notes": [
+        {
+          "name": "Programming in ANSI C -Chapter 1-5",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/Programming%20in%20ANSI%20C%20-Chapter%201-5-.pdf"
+        },
+        {
+          "name": "CSE-1111-CT(24-25)",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/CSE%20CT.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 2nd Semester",
+      "title": "Electrical Circuit II",
+      "code": "EEE 1211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/circuit2p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/circuit2p2.jpg"
+        ],
+        "21-22": [],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Circuit-I_p3.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "1st Year 2nd Semester",
+      "title": "Electronic Device and Circuit I",
+      "code": "EEE 1221",
+      "links": {
+        "20-21": [],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit-%20I_p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit-%20I_p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit-%20I_p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit-%20I_p4.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20I-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20I-p2.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electronic%20Device%20and%20Circuit%20I-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electronic%20Device%20and%20Circuit%20I-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electronic%20Device%20and%20Circuit-%20I-p3.jpg"
+        ],
+        "24-25": ["https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/EDC-1-24-25.pdf"]
+      },
+      "notes": [
+        {
+          "name": "VK Mehta Principles of Electronics",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/vk-mehta-principles-of-electronics.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 2nd Semester",
+      "title": "Accounting and Economics for Engineers",
+      "code": "HUM 1211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ACCOUNTING-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ACCOUNTING-P2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ACCOUNTING-P3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ACCOUNTING-P4.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ACCOUNTING-P5.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Accounting%20and%20Economics%20for%20Engineers-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Accounting%20and%20Economics%20for%20Engineers-p2.jpg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "1st Year 2nd Semester",
+      "title": "Linear Algebra and Vector Analysis",
+      "code": "MATH 1211",
+      "links": {
+        "20-21": [],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/linear-algebra-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/linear-algebra-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/linear-algebra-p3.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Linear%20Algebra%20and%20Vector%20Analysis-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Linear%20Algebra%20and%20Vector%20Analysis-p2.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Linear%20Algebra%20and%20Vector%20Analysis-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Linear%20Algebra%20and%20Vector%20Analysis-p2.jpg"
+        ],
+        "24-25": []
+      },
+      "notes": [
+        {
+          "name": "linear algebra-3rd edition",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/linear%20algebra.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "1st Year 2nd Semester",
+      "title": "Chemistry",
+      "code": "CHEM 1211",
+      "links": {
+        "20-21": [],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/chem1211p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/chem1211p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Physical%20and%20Inorganic%20Chemistry-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Physical%20and%20Inorganic%20Chemistry-p2.jpg"
+        ],
+        "23-24": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Physical%20and%20Inorganic%20Chemistry-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Physical%20and%20Inorganic%20Chemistry-p2.jpg"
+        ],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 1st Semester",
+      "title": "Electrical Engineering Materials",
+      "code": "EEE 2111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 1st Semester",
+      "title": "Electronic Device and Circuit II",
+      "code": "EEE 2121",
+      "links": {
+        "20-21": [],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p3.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 1st Semester",
+      "title": "Basic Mechanical Engineering",
+      "code": "ME 2111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 1st Semester",
+      "title": "Statistics for Engineers",
+      "code": "STAT 2111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 1st Semester",
+      "title": "Legal Issues and Professional Ethics for Engineers",
+      "code": "HUM 2121",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/LEGALISSUES-P1.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 2nd Semester",
+      "title": "Electronic Device and Circuit III",
+      "code": "EEE 2211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DEVICE-3-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DEVICE-3-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 2nd Semester",
+      "title": "Electrical Machine I",
+      "code": "EEE 2221",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p4.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p5.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p6.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electrical%20Machine-%20I_p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electrical%20Machine-%20I_p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/MACHINE%201-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/MACHINE-1-P2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/MACHINE-1-P3.jpeg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 2nd Semester",
+      "title": "Digital Electronics",
+      "code": "EEE 2231",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/digital%20electronics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Digital%20Electronics-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DIGITAL%20ELECTRONICS(19-20)-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DIGITAL%20ELECTRONICS(19-20)-P2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DIGITAL%20ELECTRONICS(19-20)-P3.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Digital%20Electronics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Digital%20Electronics-p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Digital%20Electronics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Digital%20Electronics-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Digital%20Electronics-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Digital%20Electronics-p4.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Digital%20Electronics-p5.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": [
+        {
+          "name": "Digital Fundamentals by Thomas L.Floyd",
+          "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/DIGITAL_ELECTRONICS-by-Flyod.pdf"
+        }
+      ]
+    },
+    {
+      "semester": "2nd Year 2nd Semester",
+      "title": "Computational Methods for Engineers",
+      "code": "EEE 2241",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Computational%20Methods%20for%20Engineers-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Computational%20Methods%20for%20Engineers-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/COMPUTATIONAL(19-20)-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/COMPUTATIONAL(19-20)-P2.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/copmutionalmethod2241p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/computationalmethod2241p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Computational%20Methods%20for%20Engineers-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Computational%20Methods%20for%20Engineers-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "2nd Year 2nd Semester",
+      "title": "Fourier Analysis, Laplace Transform and Differential Equation",
+      "code": "MATH 2211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p4.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 1st Semester",
+      "title": "Measurement & Instrumentation",
+      "code": "EEE 3111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/measurement-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/measurement-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/measurement-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/measurement-p4.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Measurement%20%26%20Instrumentation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Measurement%20%26%20Instrumentation-p2.jpg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 1st Semester",
+      "title": "Electrical Machine II",
+      "code": "EEE 3121",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p4.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p5.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electrical%20Machine%20II.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p4.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 1st Semester",
+      "title": "Microprocessor and Microcontroller",
+      "code": "EEE 3131",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Micro-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/micro-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/micro-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/micro-p4.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Microprocessor%20and%20Microcontroller-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Microprocessor%20and%20Microcontroller-p3.jpg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 1st Semester",
+      "title": "Power Electronics",
+      "code": "EEE 3141",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Power%20Electronics.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Power%20Electronics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Power%20Electronics-p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Power%20Electronics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Power%20Electronics-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 1st Semester",
+      "title": "Signals and Linear Systems",
+      "code": "EEE 3151",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Signals%20and%20Linear%20Systems-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Signals%20and%20Linear%20Systems-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Signals%20and%20Linear%20Systems-p3.jpg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 2nd Semester",
+      "title": "Communication Engineering I",
+      "code": "EEE 3211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Communication%20Engineering%20I-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Communication%20Engineering%20I-p2.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/communication%201-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/communication%201-p2.jpeg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 2nd Semester",
+      "title": "Power System I",
+      "code": "EEE 3221",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Power%20System%20I-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Power%20System%20I-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/POWERSYSTEM-2-19-20-P1.JPEG",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/POWERSYSTEM-2-19-20-P2.JPEG"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/powersystem-1-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/powersystem-1-p2.jpeg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 2nd Semester",
+      "title": "Power Plant Engineering and Economy",
+      "code": "EEE 3231",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Power%20Plant%20Engineering%20and%20Economy-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Power%20Plant%20Engineering%20and%20Economy-p2.jpg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 2nd Semester",
+      "title": "Control Systems",
+      "code": "EEE 3241",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/controlsystem-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/controlsystem-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/controlsystem-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/control%20system%2019-20-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/control%20system%2019-20-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/control%20system%2019-20-p3.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Control%20Systems-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Control%20Systems-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Control%20Systems-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Control%20Systems-p4.jpeg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "3rd Year 2nd Semester",
+      "title": "Engineering Electromagnetics",
+      "code": "EEE 3251",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p3.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p2.jpeg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 1st Semester",
+      "title": "Communication Engineering II",
+      "code": "EEE 4111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Communication%20Engineering%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Communication%20Engineering%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/COMMUNICATION-2-19-20.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 1st Semester",
+      "title": "Power System II",
+      "code": "EEE 4121",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/POWERSYSTEM 2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/POWERSYSTEM2_02.jpg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 1st Semester",
+      "title": "Digital Signal Processing",
+      "code": "EEE 4131",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/digital%20processing-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Digital%20Signal%20Processing-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DIGITAL%20SIGNAL-19-20-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DIGITAL%20SIGNAL-19-20-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 1st Semester",
+      "title": "Elective I",
+      "code": "EEE 41**",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Biomedical%20Engineering-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Biomedical%20Engineering_p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/biomedical(19-20)-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/biomedical(19-20)-p2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 2nd Semester",
+      "title": "Communication Engineering III",
+      "code": "EEE 4211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/communication-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/communication-p2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 2nd Semester",
+      "title": "Power System Protection and Switchgear",
+      "code": "EEE 4221",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/powersystemswitchgear-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/powersystemswitchgear-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/switchgear(19-20)-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/switchgear(19-20)-p2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 2nd Semester",
+      "title": "VLSI Circuits and Design",
+      "code": "EEE 4231",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/CamScanner%2003-05-2026%2016.39_1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/CamScanner%2003-05-2026%2016.39_2.jpg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "semester": "4th Year 2nd Semester",
+      "title": "Elective II",
+      "code": "EEE 42**",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p3.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    }
+  ],
+  "Library": [
+    {
+      "id": "lib-001",
+      "title": "Electric Circuits",
+      "author": "Charles K. Alexander, Matthew N. O. Sadiku",
+      "edition": "7th Edition",
+      "category": "Electrical Circuit",
+      "url": "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-24-25/main/Copy%20of%20Electric%20Circuits%20-Alexander%207th%20edition-%20(1).pdf"
+    },
+    {
+      "id": "lib-002",
+      "title": "Principles of Electronics",
+      "author": "V.K. Mehta, Rohit Mehta",
+      "edition": "11th Edition",
+      "category": "Electronic Device and Circuit",
+      "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/vk-mehta-principles-of-electronics.pdf"
+    },
+    {
+      "id": "lib-003",
+      "title": "Digital Fundamentals",
+      "author": "Thomas L. Floyd",
+      "edition": "11th Edition",
+      "category": "Digital Electronics",
+      "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/DIGITAL_ELECTRONICS-by-Flyod.pdf"
+    },
+    {
+      "id": "lib-004",
+      "title": "Linear Algebra",
+      "author": "Unknown Author",
+      "edition": "3rd Edition",
+      "category": "Mathematics",
+      "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/linear%20algebra.pdf"
+    }
+  ]
+}

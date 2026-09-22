@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <title>EEE Vault JSTU</title>
+    <meta name="description" content="Question bank and study material archive for JSTU EEE." />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EEE Vault" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/icon-192.png" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        },
+        options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
