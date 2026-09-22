@@ -1,0 +1,9 @@
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

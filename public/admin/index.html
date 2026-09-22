@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-</head>
-<body>
-  <script>
-    CMS.registerPreviewStyle("admin-preview.css");
-  </script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>EEE Vault Content Manager</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #f5f5f5;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      if (window.CMS) {
+        window.CMS.registerPreviewStyle("/admin/admin-preview.css");
+        window.CMS.init();
+      }
+    </script>
+  </body>
 </html>

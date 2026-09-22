@@ -27,12 +27,71 @@ export function slugify(str) {
 }
 
 export function triggerDownload(url, fileName) {
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = fileName;
-  a.target = "_blank";
-  a.rel = "noopener";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  if (!url) return;
+
+  const safeName = (fileName || "download.pdf").replace(/[\\/:*?"<>|]+/g, "_");
+
+  const triggerAnchor = (targetUrl) => {
+    const a = document.createElement("a");
+    a.href = targetUrl;
+    a.download = safeName;
+    a.rel = "noopener";
+    a.style.display = "none";
+    document.body.appendChild(a);
+
+    try {
+      a.click();
+    } catch {
+      // no-op
+    }
+
+    setTimeout(() => {
+      try {
+        document.body.removeChild(a);
+      } catch {
+        // no-op
+      }
+    }, 1200);
+  };
+
+  const isRemoteAsset = /^https?:\/\//i.test(url);
+
+  if (isRemoteAsset) {
+    fetch(url, { mode: "cors", credentials: "omit" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Download request failed: ${response.status}`);
+        }
+        return response.blob();
+      })
+      .then((blob) => {
+        const blobUrl = URL.createObjectURL(blob);
+        triggerAnchor(blobUrl);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+      })
+      .catch(() => {
+        const fallback = document.createElement("a");
+        fallback.href = url;
+        fallback.download = safeName;
+        fallback.target = "_blank";
+        fallback.rel = "noopener";
+        fallback.style.display = "none";
+        document.body.appendChild(fallback);
+        try {
+          fallback.click();
+        } catch {
+          window.location.href = url;
+        }
+        setTimeout(() => {
+          try {
+            document.body.removeChild(fallback);
+          } catch {
+            // no-op
+          }
+        }, 1200);
+      });
+    return;
+  }
+
+  triggerAnchor(url);
 }

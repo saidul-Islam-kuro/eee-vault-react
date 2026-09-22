@@ -1,52 +1,58 @@
 backend:
   name: github
-  repo: KURO-RGBN/EEE-QUESTION-BANK-JSTU
+  repo: saidul-Islam-kuro/eee-vault-react
   branch: main
-  base_url: https://eeevaultjstu.vercel.app
+  base_url: http://localhost:5174
   auth_endpoint: api/auth
 
-media_folder: "admin/uploads"
-public_folder: "/admin/uploads"
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "vault"
-    label: "Vault"
+    label: "Vault Data"
     files:
-      - file: "data.json"
-        label: "course Data"
-        name: "data"
+      - file: "public/data.json"
+        label: "Vault Data"
+        name: "vault"
+        format: "json"
         fields:
-          - name: "Course"
-            label: "Courses"
+          - label: "Courses"
+            name: "Course"
             widget: "list"
             summary: "{{fields.semester}} | {{fields.title}} ({{fields.code}})"
             fields:
-              - {name: "semester", label: "Semester", widget: "string"}
-              - {name: "title", label: "Course Title", widget: "string"}
-              - {name: "code", label: "Course Code", widget: "string"}
-              - name: "links"
-                label: "Session Links"
+              - { label: "Semester", name: "semester", widget: "string" }
+              - { label: "Course Title", name: "title", widget: "string" }
+              - { label: "Course Code", name: "code", widget: "string" }
+
+              - label: "Session Papers"
+                name: "links"
                 widget: "object"
+                collapsed: true
                 fields:
-                  - {name: "20-21", label: "Session 20-21", widget: "list"}
-                  - {name: "21-22", label: "Session 21-22", widget: "list"}
-                  - {name: "22-23", label: "Session 22-23", widget: "list"}
-                  - {name: "23-24", label: "Session 23-24", widget: "list"}
-                  - {name: "24-25", label: "Session 24-25", widget: "list"}
-              - name: "notes"
-                label: "Course Notes"
+                  - { label: "20-21", name: "20-21", widget: "list", default: [] }
+                  - { label: "21-22", name: "21-22", widget: "list", default: [] }
+                  - { label: "22-23", name: "22-23", widget: "list", default: [] }
+                  - { label: "23-24", name: "23-24", widget: "list", default: [] }
+                  - { label: "24-25", name: "24-25", widget: "list", default: [] }
+
+              - label: "Course Notes"
+                name: "notes"
                 widget: "list"
+                collapsed: true
                 fields:
-                  - {name: "name", label: "Note Name", widget: "string"}
-                  - {name: "url", label: "URL", widget: "string"}
-          - name: "Library"
-            label: "Library Books"
+                  - { label: "Note Name", name: "name", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+          - label: "Library Books"
+            name: "Library"
             widget: "list"
             summary: "{{fields.title}} — {{fields.author}}"
             fields:
-              - {name: "id", label: "ID", widget: "string"}
-              - {name: "title", label: "Title", widget: "string"}
-              - {name: "author", label: "Author", widget: "string"}
-              - {name: "edition", label: "Edition", widget: "string", required: false}
-              - {name: "category", label: "Category", widget: "string", required: false}
-              - {name: "url", label: "URL", widget: "string"}
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Edition", name: "edition", widget: "string", required: false }
+              - { label: "Category", name: "category", widget: "string", required: false }
+              - { label: "Book URL", name: "url", widget: "string" }

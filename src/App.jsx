@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -7,12 +8,26 @@ import ViewerPage from "./pages/ViewerPage";
 import { VaultDataContext } from "./context/VaultDataContext";
 import { useVaultData } from "./hooks/useVaultData";
 
+function AdminRedirect() {
+  useEffect(() => {
+    window.location.replace("/admin/index.html");
+  }, []);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 text-sm font-semibold text-slate-600">
+      Loading CMS…
+    </div>
+  );
+}
+
 export default function App() {
   const vaultData = useVaultData();
 
   return (
     <VaultDataContext.Provider value={vaultData}>
       <Routes>
+        <Route path="/admin" element={<AdminRedirect />} />
+        <Route path="/admin/*" element={<AdminRedirect />} />
         <Route path="/viewer/:code/:batch" element={<ViewerPage />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
