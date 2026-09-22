@@ -6,8 +6,13 @@ export function useConfirmDialog() {
   const ask = useCallback((cfg) => setConfig(cfg), []);
   const close = useCallback(() => setConfig(null), []);
   const confirm = useCallback(() => {
-    config?.onConfirm?.();
+    const pending = config;
     setConfig(null);
+
+    if (typeof pending?.onConfirm === "function") {
+      Promise.resolve()
+        .then(() => pending.onConfirm());
+    }
   }, [config]);
 
   return { open: !!config, config, ask, close, confirm };
