@@ -45,6 +45,25 @@ collections:
                   - { label: "Note Name", name: "name", widget: "string" }
                   - { label: "URL", name: "url", widget: "string" }
 
+              - label: "Video Modules"
+                name: "videos"
+                widget: "list"
+                collapsed: true
+                required: false
+                hint: "Add a full YouTube playlist with one playlistId, or add individual lecture items."
+                fields:
+                  - { label: "Module Title", name: "title", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string", default: "Playlist", required: false }
+                  - { label: "Playlist ID", name: "playlistId", widget: "string", required: false, hint: "Use only the playlist ID, not the full URL. Example: PLBlnK6fEyqRhCuQsNsNXFlCNa_5_jnm1a" }
+                  - label: "Lecture Items"
+                    name: "classes"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Item Title", name: "title", widget: "string" }
+                      - { label: "YouTube Video ID", name: "videoId", widget: "string", hint: "Example: M7lc1UVf-VE" }
+                      - { label: "Type", name: "type", widget: "string", default: "Lecture", required: false }
+
           - label: "Library Books"
             name: "Library"
             widget: "list"

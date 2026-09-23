@@ -67,6 +67,30 @@
           "name": "S-6 C-4 Magnetic Quantities & Magnetization Curve",
           "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/S-6%20C-4%20Magnetic%20Quantities%20%26%20Magnetization%20Curve.pdf"
         }
+      ],
+      "videos": [
+        {
+          "title": "Module 1: Basic Concepts & Laws",
+          "playlistId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF",
+          "type": "Playlist"
+          
+        },
+        {
+          "title": "Module 2: Network Analysis",
+          "classes": [
+            {
+              "title": "Lecture 3 - KCL and KVL",
+              "videoId": "a2tmHmIQ3hw",
+              "type": "Lecture"
+            },
+            {
+              "title": "Lecture 4 - Mesh and Nodal Analysis",
+              "playlistId": "PLBlnK6fEyqRhCuQsNsNXFlCNa_5_jnm1a",
+          "type": "Playlist"
+              
+            }
+          ]
+        }
       ]
     },
     {

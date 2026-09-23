@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Vault from "./pages/Vault";
 import Notes from "./pages/Notes";
 import Library from "./pages/Library";
+import VideosPage from "./pages/Videos";
 import ViewerPage from "./pages/ViewerPage";
 import { VaultDataContext } from "./context/VaultDataContext";
 import { useVaultData } from "./hooks/useVaultData";
@@ -39,6 +40,8 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/vault" element={<Vault />} />
+          <Route path="/videos" element={<VideosPage />} />
+          <Route path="/videos/:courseCode" element={<VideosPage />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/library" element={<Library />} />
         </Route>

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Library, NotebookPen } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Library, NotebookPen, PlaySquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DIRECTORY_ITEMS = [
@@ -10,11 +10,18 @@ const DIRECTORY_ITEMS = [
     accent: "from-[#d92a2a] to-[#a61414]",
   },
   {
+    to: "/videos",
+    label: "Videos",
+    caption: "Video classes & lecture playlists",
+    icon: PlaySquare,
+    accent: "from-[#2f2f2f] to-[#171717]",
+  },
+  {
     to: "/notes",
     label: "Notes",
     caption: "Lecture notes & study guides",
     icon: NotebookPen,
-    accent: "from-[#2f2f2f] to-[#171717]",
+    accent: "from-[#4b4b4b] to-[#212121]",
   },
   {
     to: "/library",

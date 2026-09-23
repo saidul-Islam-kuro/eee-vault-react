@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { Home, Library, NotebookText, Vault as VaultIcon } from "lucide-react";
+import { Home, Library, NotebookText, PlaySquare, Vault as VaultIcon } from "lucide-react";
 
 const TABS = [
   { to: "/", label: "Home", icon: Home, end: true },
   { to: "/vault", label: "Vault", icon: VaultIcon, end: false },
+  { to: "/videos", label: "Videos", icon: PlaySquare, end: false },
   { to: "/notes", label: "Notes", icon: NotebookText, end: false },
   { to: "/library", label: "Library", icon: Library, end: false },
 ];
