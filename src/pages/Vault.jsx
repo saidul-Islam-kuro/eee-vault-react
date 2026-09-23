@@ -114,10 +114,11 @@ export default function Vault() {
       )}
 
       <div className="grid grid-cols-1 gap-6">
-        {filtered.map((course) => (
+        {filtered.map((course, index) => (
           <CourseCard
             key={course.code}
             course={course}
+            index={index}
             onMissing={openUpload}
             onOpenPaper={(c, batch) => {
               saveVaultScroll();

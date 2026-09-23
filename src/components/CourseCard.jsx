@@ -1,9 +1,37 @@
+import { useEffect, useRef, useState } from "react";
 import SessionButton from "./SessionButton";
 import { BATCHES, isMissingLink } from "../lib/vault";
 
-export default function CourseCard({ course, onOpenPaper, onMissing }) {
+export default function CourseCard({ course, index = 0, onOpenPaper, onMissing }) {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = cardRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="glass-card p-6 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.4)] border border-black/5 bg-white/90 mb-4">
+    <div
+      ref={cardRef}
+      className={`vault-card glass-card p-6 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.4)] border border-black/5 bg-white/90 mb-4 ${
+        isVisible ? "is-visible" : ""
+      }`}
+      style={{ transitionDelay: `${index * 70}ms` }}
+    >
       <div className="flex flex-col gap-3">
         <div>
           <span className="text-[10px] font-black text-[#d92a2a] bg-[#fff3f3] px-2 py-0.5 rounded uppercase border border-[#f6d7d7]">

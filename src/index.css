@@ -21,6 +21,7 @@ body,
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   touch-action: pan-y;
@@ -37,6 +38,24 @@ body {
   background: #f1f5f9;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cg fill='none' stroke='%23d92a2a' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Ccircle cx='11' cy='11' r='2.2' fill='%23d92a2a' stroke='none'/%3E%3C/g%3E%3C/svg%3E") 11 11, auto;
+}
+
+body * {
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, opacity 180ms ease, filter 180ms ease;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  cursor: inherit;
+}
+
+button,
+a {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23d92a2a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='7.5'/%3E%3Ccircle cx='12' cy='12' r='2.5' fill='%23d92a2a' stroke='none'/%3E%3C/g%3E%3C/svg%3E") 12 12, pointer;
 }
 
 body.modal-open {
@@ -74,6 +93,53 @@ textarea {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   position: relative;
+}
+
+.vault-card {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0) scale(0.988);
+  filter: blur(6px);
+  transition: opacity 220ms linear, transform 260ms cubic-bezier(0.22, 1, 0.36, 1), filter 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 180ms ease;
+  will-change: transform, opacity, filter;
+}
+
+.vault-card.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+.home-card {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.985);
+  animation: home-card-in 450ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--card-delay, 0ms);
+}
+
+@keyframes home-card-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.page-shell {
+  animation: page-shell-in 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes page-shell-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Tactile press feedback used across buttons/cards */

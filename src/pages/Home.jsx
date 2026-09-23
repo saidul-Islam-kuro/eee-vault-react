@@ -28,7 +28,7 @@ const DIRECTORY_ITEMS = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden rounded-[32px] border border-black/5 bg-[radial-gradient(circle_at_top_left,_rgba(217,42,42,0.10),_transparent_36%),linear-gradient(135deg,#ffffff_0%,#f7f5f2_45%,#f1efe9_100%)] p-6 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.6)] md:p-8">
+      <section className="page-shell relative overflow-hidden rounded-[32px] border border-black/5 bg-[radial-gradient(circle_at_top_left,_rgba(217,42,42,0.10),_transparent_36%),linear-gradient(135deg,#ffffff_0%,#f7f5f2_45%,#f1efe9_100%)] p-6 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.6)] md:p-8">
         <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,_rgba(217,42,42,0.06),_transparent_50%)] md:block" />
 
         <div className="relative z-10 max-w-2xl">
@@ -66,11 +66,12 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {DIRECTORY_ITEMS.map(({ to, label, caption, icon: Icon, accent }) => (
+          {DIRECTORY_ITEMS.map(({ to, label, caption, icon: Icon, accent }, index) => (
             <Link
               key={to}
               to={to}
-              className="group relative overflow-hidden rounded-[28px] border border-black/5 bg-white p-5 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.45)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-28px_rgba(0,0,0,0.6)]"
+              className="home-card group relative overflow-hidden rounded-[28px] border border-black/5 bg-white p-5 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.45)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-28px_rgba(0,0,0,0.6)]"
+              style={{ "--card-delay": `${index * 120}ms` }}
             >
               <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${accent}`} />
               <div className="flex h-full flex-col">
@@ -91,10 +92,10 @@ export default function Home() {
       <footer className="mt-10 border-t border-black/5 py-10">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="mb-4 h-[2px] w-10 rounded-full bg-[#d92a2a]" />
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-black/60">Built for Study</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-black/60">Developed and maintained by</p>
           <div className="mt-2 flex items-center gap-3">
             <BookOpen size={16} className="text-[#d92a2a]" />
-            <p className="text-sm font-semibold text-black">EEE Vault JSTU</p>
+            <p className="text-sm font-semibold text-black">Saidul Islam Kuro EEE 06 JSTU</p>
           </div>
         </div>
       </footer>
