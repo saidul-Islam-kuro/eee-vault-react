@@ -1022,6 +1022,12 @@
       "author": "Steven C. Chapra Raymond P. Canale",
       "edition": "6th",
       "id": "lib-16"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/measurements-and-instrumentation-principles-by-alan-s-morris-3rd-edition.pdf",
+      "title": "Measurement and Instrumentation Principles",
+      "id": "lib-17",
+      "author": "Alan S Morris"
     }
   ]
 }
