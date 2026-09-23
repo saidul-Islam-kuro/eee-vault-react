@@ -947,6 +947,14 @@
       "author": " Ramakandh A. Gayakwad",
       "edition": "4th",
       "category": "Electronic Device and Circuit"
+    },
+    {
+      "id": "lib-06",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Electronic%20Devices%20and%20Circuit%20Theory%20-%2011th%20Edition_compressed.pdf",
+      "author": "Boylstad and Nashelsky",
+      "edition": "11th",
+      "title": "Electronic Devices and Circuits",
+      "category": "Electronic Device and Circuit"
     }
   ]
 }
