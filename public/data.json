@@ -1009,6 +1009,12 @@
       "id": "lib-13",
       "title": "Signals and Systems",
       "author": "Symon Haykin and Berry Van  Veen"
+    },
+    {
+      "id": "lib-15",
+      "url": "Digital Communication Systems",
+      "author": "Simon Haykin",
+      "title": "Digital Communication Systems"
     }
   ]
 }
