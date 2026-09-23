@@ -14,7 +14,7 @@ export default function ModalOverlay({ open, onClose, children, align = "center"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();
       }}
-      className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex animate-fade-in ${
+      className={`fixed inset-0 bg-[#111111]/55 backdrop-blur-sm flex animate-fade-in ${
         align === "center" ? "items-center justify-center p-4" : "items-end justify-center"
       }`}
       style={{ zIndex }}

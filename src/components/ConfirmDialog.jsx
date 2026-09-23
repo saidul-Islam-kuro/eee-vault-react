@@ -22,17 +22,17 @@ export default function ConfirmDialog({
     <ModalOverlay open={open} onClose={onClose} align="center">
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-[85%] max-w-[320px] p-6 rounded-[28px] text-center animate-pop-in"
+        className="bg-white w-[85%] max-w-[320px] p-6 rounded-[28px] text-center animate-pop-in border border-black/5 shadow-[0_24px_50px_-30px_rgba(0,0,0,0.5)]"
       >
-        <div className="w-[60px] h-[60px] bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-[60px] h-[60px] bg-[#fff3f3] text-[#d92a2a] rounded-full flex items-center justify-center mx-auto mb-4">
           {Icon ? <Icon size={26} /> : null}
         </div>
-        <h3 className="text-slate-900 font-extrabold mb-2">{title}</h3>
-        {message ? <p className="text-slate-500 text-xs leading-relaxed">{message}</p> : null}
+        <h3 className="text-black font-extrabold mb-2">{title}</h3>
+        {message ? <p className="text-black/60 text-xs leading-relaxed">{message}</p> : null}
         <div className="flex gap-3 mt-6">
           <button
             onClick={onClose}
-            className="tactile flex-1 py-3 rounded-2xl font-bold text-sm bg-slate-100 text-slate-500"
+            className="tactile flex-1 py-3 rounded-2xl font-bold text-sm bg-[#f7f5f2] text-black/70"
           >
             {cancelLabel}
           </button>

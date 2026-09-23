@@ -1,102 +1,103 @@
-import { useMemo, useState } from "react";
-import { useNavigate, useOutletContext } from "react-router-dom";
-import { Search, ChevronDown } from "lucide-react";
-import CourseCard from "../components/CourseCard";
-import SemesterSheet from "../components/SemesterSheet";
-import { useVaultDataContext } from "../context/VaultDataContext";
-import { slugify } from "../lib/vault";
+import { ArrowRight, BookOpen, FileText, Library, NotebookPen } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const DIRECTORY_ITEMS = [
+  {
+    to: "/vault",
+    label: "Vault",
+    caption: "Course papers & question banks",
+    icon: FileText,
+    accent: "from-[#d92a2a] to-[#a61414]",
+  },
+  {
+    to: "/notes",
+    label: "Notes",
+    caption: "Lecture notes & study guides",
+    icon: NotebookPen,
+    accent: "from-[#2f2f2f] to-[#171717]",
+  },
+  {
+    to: "/library",
+    label: "Library",
+    caption: "Reference books & e-resources",
+    icon: Library,
+    accent: "from-[#4b4b4b] to-[#212121]",
+  },
+];
 
 export default function Home() {
-  const { courseData, status } = useVaultDataContext();
-  const { openUpload } = useOutletContext();
-  const navigate = useNavigate();
-
-  const [query, setQuery] = useState("");
-  const [semValue, setSemValue] = useState("all");
-  const [semLabel, setSemLabel] = useState("All Semesters");
-  const [semSheetOpen, setSemSheetOpen] = useState(false);
-
-  const filtered = useMemo(() => {
-    const q = query.toLowerCase();
-    return courseData.filter(
-      (c) =>
-        (c.title.toLowerCase().includes(q) || c.code.toLowerCase().includes(q)) &&
-        (semValue === "all" || c.semester === semValue)
-    );
-  }, [courseData, query, semValue]);
-
   return (
     <>
-      <div className="glass-card p-6 rounded-3xl shadow-sm mb-8 border border-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative">
-            <Search className="absolute left-4 top-3.5 text-slate-400" size={18} />
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search Title or Code..."
-              className="w-full pl-12 pr-4 py-3 rounded-2xl border-none bg-slate-100 outline-none text-sm"
-            />
+      <section className="relative overflow-hidden rounded-[32px] border border-black/5 bg-[radial-gradient(circle_at_top_left,_rgba(217,42,42,0.10),_transparent_36%),linear-gradient(135deg,#ffffff_0%,#f7f5f2_45%,#f1efe9_100%)] p-6 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.6)] md:p-8">
+        <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,_rgba(217,42,42,0.06),_transparent_50%)] md:block" />
+
+        <div className="relative z-10 max-w-2xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/5 bg-white px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.28em] text-black/65">
+            EEE Study Hub
           </div>
-          <button
-            onClick={() => setSemSheetOpen(true)}
-            className="tactile flex items-center justify-between bg-slate-100 p-4 rounded-2xl"
-          >
-            <span className="font-bold text-slate-800 text-sm truncate">{semLabel}</span>
-            <ChevronDown className="text-slate-400 shrink-0 ml-1" size={18} />
-          </button>
-        </div>
-      </div>
 
-      {status === "loading" && (
-        <div className="text-center text-slate-400 text-sm py-16">Loading course archive…</div>
-      )}
-      {status === "error" && (
-        <div className="text-center text-red-500 text-sm py-16">Couldn't load the vault data. Pull to refresh.</div>
-      )}
-      {status === "ready" && filtered.length === 0 && (
-        <div className="text-center text-slate-400 text-sm py-16">No courses match that search.</div>
-      )}
+          <h1 className="mt-5 text-4xl font-black leading-none tracking-[-0.06em] text-black md:text-6xl">
+            Learn smarter.<br />
+            <span className="text-[#d92a2a]">Find faster.</span>
+          </h1>
 
-      <div className="grid grid-cols-1 gap-6">
-        {filtered.map((course) => (
-          <CourseCard
-            key={course.code}
-            course={course}
-            onMissing={openUpload}
-            onOpenPaper={(c, batch) => navigate(`/viewer/${slugify(c.code)}/${slugify(batch)}`)}
-          />
-        ))}
-      </div>
-
-      <footer className="w-full py-12 mt-10 border-t border-slate-200">
-        <div className="flex flex-col items-center justify-center">
-          <div className="w-8 h-[2px] bg-red-600 rounded-full mb-4" />
-          <p className="text-[10px] tracking-[0.3em] text-slate-400 font-black uppercase mb-1">
-            Developed &amp; Maintained by
+          <p className="mt-4 max-w-xl text-base leading-7 text-black/70 md:text-lg">
+            A focused academic directory for engineering students — from past exam papers to notes, references, and everything in between.
           </p>
-          <h4 className="text-lg font-black tracking-tighter text-slate-800">
-            SAIDUL ISLAM <span className="text-red-600">KURO</span>
-          </h4>
-          <div className="flex items-center gap-2 mt-2">
-            <span className="h-[1px] w-4 bg-slate-300" />
-            <p className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">JSTU • EEE BATCH 06</p>
-            <span className="h-[1px] w-4 bg-slate-300" />
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              to="/vault"
+              className="tactile inline-flex items-center gap-2 rounded-full bg-[#171717] px-5 py-3 text-sm font-bold text-white shadow-[0_16px_32px_-18px_rgba(0,0,0,0.7)]"
+            >
+              Open Vault <ArrowRight size={16} />
+            </Link>
+            <div className="rounded-full border border-black/5 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-black/65">
+              JSTU • EEE
+            </div>
           </div>
-          <p className="text-[10px] text-slate-400 mt-6 italic">© 2026 EEE Vault JSTU</p>
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-xl font-black tracking-[-0.04em] text-black">Explore</h2>
+          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-black/50">Directory</span>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {DIRECTORY_ITEMS.map(({ to, label, caption, icon: Icon, accent }) => (
+            <Link
+              key={to}
+              to={to}
+              className="group relative overflow-hidden rounded-[28px] border border-black/5 bg-white p-5 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.45)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-28px_rgba(0,0,0,0.6)]"
+            >
+              <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${accent}`} />
+              <div className="flex h-full flex-col">
+                <div className={`mb-4 inline-flex w-fit rounded-2xl bg-gradient-to-br ${accent} p-3 text-white`}>
+                  <Icon size={22} strokeWidth={2.2} />
+                </div>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-lg font-black tracking-[-0.04em] text-black">{label}</h3>
+                  <ArrowRight size={18} className="text-black/60 transition group-hover:translate-x-1" />
+                </div>
+                <p className="mt-2 text-sm leading-6 text-black/65">{caption}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <footer className="mt-10 border-t border-black/5 py-10">
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="mb-4 h-[2px] w-10 rounded-full bg-[#d92a2a]" />
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-black/60">Built for Study</p>
+          <div className="mt-2 flex items-center gap-3">
+            <BookOpen size={16} className="text-[#d92a2a]" />
+            <p className="text-sm font-semibold text-black">EEE Vault JSTU</p>
+          </div>
         </div>
       </footer>
-
-      <SemesterSheet
-        open={semSheetOpen}
-        onClose={() => setSemSheetOpen(false)}
-        value={semValue}
-        onChange={(val, label) => {
-          setSemValue(val);
-          setSemLabel(label);
-        }}
-      />
     </>
   );
 }

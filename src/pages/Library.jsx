@@ -42,19 +42,19 @@ export default function Library() {
   return (
     <>
       <div className="mb-6">
-        <h2 className="text-xl font-black text-slate-900 uppercase tracking-tighter">E-Book Library</h2>
-        <p className="text-slate-500 text-xs font-bold uppercase">Engineering References</p>
+        <h2 className="text-xl font-black text-black uppercase tracking-tighter">E-Book Library</h2>
+        <p className="text-black/60 text-xs font-bold uppercase">Engineering References</p>
       </div>
 
-      <div className="glass-card p-4 rounded-3xl shadow-sm mb-6 border border-white">
+      <div className="glass-card p-4 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.42)] mb-6 border border-black/5 bg-white/90">
         <div className="relative mb-3">
-          <Search className="absolute left-4 top-3.5 text-slate-400" size={16} />
+          <Search className="absolute left-4 top-3.5 text-black/45" size={16} />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search textbook title or author..."
-            className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:border-red-500 text-sm transition-colors"
+            className="w-full pl-11 pr-4 py-3 rounded-xl bg-[#f9f8f6] border border-black/5 outline-none focus:border-[#d92a2a] text-sm transition-colors text-black"
           />
         </div>
         {categories.length > 2 && (
@@ -65,8 +65,8 @@ export default function Library() {
                 onClick={() => setCategory(c)}
                 className={`tactile shrink-0 px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-wide border ${
                   category === c
-                    ? "bg-red-600 border-red-600 text-white"
-                    : "bg-white border-slate-200 text-slate-500"
+                    ? "bg-[#d92a2a] border-[#d92a2a] text-white"
+                    : "bg-white border-black/5 text-black/60"
                 }`}
               >
                 {c === "all" ? "All" : c}
@@ -76,9 +76,9 @@ export default function Library() {
         )}
       </div>
 
-      {status === "loading" && <div className="text-center text-slate-400 text-sm py-16">Loading library…</div>}
+      {status === "loading" && <div className="text-center text-black/50 text-sm py-16">Loading library…</div>}
       {status === "ready" && filtered.length === 0 && (
-        <div className="text-center text-slate-400 text-sm py-16">No reference books found.</div>
+        <div className="text-center text-black/50 text-sm py-16">No reference books found.</div>
       )}
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -86,16 +86,16 @@ export default function Library() {
           <button
             key={book.id || book.url}
             onClick={() => requestDownload(book)}
-            className="tactile-card file-card bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center flex flex-col items-center"
+            className="tactile-card file-card bg-[#f9f8f6] border border-black/5 rounded-2xl p-4 text-center flex flex-col items-center shadow-[0_10px_25px_-20px_rgba(0,0,0,0.5)]"
           >
-            <div className="w-12 h-12 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center mb-3">
-              <BookOpen className="text-red-600" size={22} />
+            <div className="w-12 h-12 rounded-2xl bg-[#fff3f3] border border-[#f6d7d7] flex items-center justify-center mb-3">
+              <BookOpen className="text-[#d92a2a]" size={22} />
             </div>
-            <span className="text-[11px] font-bold text-slate-700 line-clamp-2">{book.title}</span>
-            <span className="text-[9px] text-slate-400 mt-1 uppercase font-black tracking-wider truncate max-w-full">
+            <span className="text-[11px] font-bold text-black line-clamp-2">{book.title}</span>
+            <span className="text-[9px] text-black/50 mt-1 uppercase font-black tracking-wider truncate max-w-full">
               {book.author || "Reference"}
             </span>
-            <span className="mt-3 inline-flex items-center gap-1 text-[9px] font-black uppercase tracking-wider text-red-600">
+            <span className="mt-3 inline-flex items-center gap-1 text-[9px] font-black uppercase tracking-wider text-[#a61414]">
               <Download size={11} /> Download
             </span>
           </button>

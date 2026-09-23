@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import Vault from "./pages/Vault";
 import Notes from "./pages/Notes";
 import Library from "./pages/Library";
 import ViewerPage from "./pages/ViewerPage";
@@ -23,6 +24,12 @@ function AdminRedirect() {
 export default function App() {
   const vaultData = useVaultData();
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   return (
     <VaultDataContext.Provider value={vaultData}>
       <Routes>
@@ -31,6 +38,7 @@ export default function App() {
         <Route path="/viewer/:code/:batch" element={<ViewerPage />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/vault" element={<Vault />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/library" element={<Library />} />
         </Route>
