@@ -1009,6 +1009,68 @@
       "title": "Concepts of Moderm Physics",
       "author": "A. Beiser",
       "category": "Mechanical"
+    },
+    {
+      "id": "lib-11",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/A_K_Sawhney_A_course_in_Electrical_and_E_compressed.pdf",
+      "author": "A.K. Sawhney",
+      "title": "Electrical and Electronic Measurement and Instrumentation"
+    },
+    {
+      "id": "lib-12",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Elements_of_Electromagnetics_Sadiku_compressed.pdf",
+      "title": "Elements of Electromagnetism",
+      "author": "Sadiku"
+    },
+    {
+      "id": "lib-13",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/feismo.com-power-electronics-by-m-h-rashid-pr_5cee6785ab34ffa91424b5c7e8e63b20_compressed.pdf",
+      "title": "Power Electronics",
+      "author": "M.H. Rashid"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/signals-and-systems-simon-haykin_compressed.pdf",
+      "id": "lib-13",
+      "title": "Signals and Systems",
+      "author": "Symon Haykin and Berry Van  Veen"
+    },
+    {
+      "id": "lib-15",
+      "url": "Digital Communication Systems",
+      "author": "Simon Haykin",
+      "title": "Digital Communication Systems"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Numerical_methods_for_engineers_for_engi.pdf",
+      "title": "Numerical Methods for Engineers",
+      "author": "Steven C. Chapra Raymond P. Canale",
+      "edition": "6th",
+      "id": "lib-16"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/measurements-and-instrumentation-principles-by-alan-s-morris-3rd-edition.pdf",
+      "title": "Measurement and Instrumentation Principles",
+      "id": "lib-17",
+      "author": "Alan S Morris"
+    },
+    {
+      "id": "lib-18",
+      "url": "https://github.com/saidul-Islam-kuro/VAULT-Library/blob/main/introduction-to-instrumentation-and-measurements-2-edition-by-robert-b-northrop.pdf",
+      "title": "Introduction to Instrumentation and Measurements",
+      "author": "Robert B. Northrop"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/feismo.com-field-and-waves-electromagnetics-2nd-edpdf-pr_d5f4d8eecc76f51ca27798c7a4d485fa.pdf",
+      "id": "lib-19",
+      "title": "field and waves electromagnetics",
+      "edition": "2nd",
+      "author": "D.K. Cheng"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/introductorystatistics_Vol1_compressed.pdf",
+      "id": "lib-20",
+      "title": "Introductory Statistics",
+      "author": "unknown"
     }
   ]
 }
