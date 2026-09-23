@@ -955,6 +955,14 @@
       "edition": "11th",
       "title": "Electronic Devices and Circuits",
       "category": "Electronic Device and Circuit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/_Book%20_%20Kasap_(4th%20edition)_Principles%20of%20Electronic%20Materials%20%26%20Devices__compressed.pdf",
+      "id": "lib-07",
+      "title": "Principle of Electronic Materials and Devices",
+      "author": "S.O. kasap",
+      "edition": "4th",
+      "category": "Engineering Materials"
     }
   ]
 }
