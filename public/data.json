@@ -985,6 +985,12 @@
       "title": "Concepts of Moderm Physics",
       "author": "A. Beiser",
       "category": "Mechanical"
+    },
+    {
+      "id": "lib-11",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/A_K_Sawhney_A_course_in_Electrical_and_E_compressed.pdf",
+      "author": "A.K. Sawhney",
+      "title": "Electrical and Electronic Measurement and Instrumentation"
     }
   ]
 }
