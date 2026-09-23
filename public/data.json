@@ -1015,6 +1015,13 @@
       "url": "Digital Communication Systems",
       "author": "Simon Haykin",
       "title": "Digital Communication Systems"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Numerical_methods_for_engineers_for_engi.pdf",
+      "title": "Numerical Methods for Engineers",
+      "author": "Steven C. Chapra Raymond P. Canale",
+      "edition": "6th",
+      "id": "lib-16"
     }
   ]
 }
