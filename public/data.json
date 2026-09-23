@@ -997,6 +997,12 @@
       "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Elements_of_Electromagnetics_Sadiku_compressed.pdf",
       "title": "Elements of Electromagnetism",
       "author": "Sadiku"
+    },
+    {
+      "id": "lib-13",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/feismo.com-power-electronics-by-m-h-rashid-pr_5cee6785ab34ffa91424b5c7e8e63b20_compressed.pdf",
+      "title": "Power Electronics",
+      "author": "M.H. Rashid"
     }
   ]
 }
