@@ -267,7 +267,9 @@
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electronic%20Device%20and%20Circuit%20I-p2.jpg",
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-23-24/main/Electronic%20Device%20and%20Circuit-%20I-p3.jpg"
         ],
-        "24-25": ["https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/EDC-1-24-25.pdf"]
+        "24-25": [
+          "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/EDC-1-24-25.pdf"
+        ]
       },
       "notes": [
         {
@@ -937,6 +939,14 @@
       "edition": "3rd Edition",
       "category": "Mathematics",
       "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/linear%20algebra.pdf"
+    },
+    {
+      "id": "edc-2",
+      "title": "Op-Amp",
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/Op-Amp%20by%20Ramakant%20A.%20Gayakwad%20(1)_compressed.pdf",
+      "author": " Ramakandh A. Gayakwad",
+      "edition": "4th",
+      "category": "Electronic Device and Circuit"
     }
   ]
 }
