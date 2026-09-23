@@ -971,6 +971,13 @@
       "edition": "1st",
       "author": "Chapman",
       "id": "lib-08"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/A_Textbook_of_Electrical_Technology_B_L.pdf",
+      "id": "lib-09",
+      "title": "A textbook of Electrical Technology,Volume 2 ",
+      "author": "Thereja",
+      "category": "Machine"
     }
   ]
 }
