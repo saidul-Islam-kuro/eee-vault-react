@@ -13,11 +13,11 @@ export default function CourseCard({ course, index = 0, onOpenPaper, onMissing }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          requestAnimationFrame(() => setIsVisible(true));
           observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.01, rootMargin: "0px 0px 0px 0px" }
     );
 
     observer.observe(node);
@@ -30,7 +30,7 @@ export default function CourseCard({ course, index = 0, onOpenPaper, onMissing }
       className={`vault-card glass-card p-6 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.4)] border border-black/5 bg-white/90 mb-4 ${
         isVisible ? "is-visible" : ""
       }`}
-      style={{ transitionDelay: `${index * 70}ms` }}
+      style={{ transitionDelay: `${Math.min(index * 18, 40)}ms` }}
     >
       <div className="flex flex-col gap-3">
         <div>
