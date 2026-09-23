@@ -95,7 +95,7 @@ export default function Home() {
           <p className="text-[10px] font-black uppercase tracking-[0.28em] text-black/60">Developed and maintained by</p>
           <div className="mt-2 flex items-center gap-3">
             <BookOpen size={16} className="text-[#d92a2a]" />
-            <p className="text-sm font-semibold text-black">Saidul Islam Kuro EEE 06 JSTU</p>
+            <p className="text-sm font-semibold text-black">Saidul Islam Kuro</p>
           </div>
         </div>
       </footer>
