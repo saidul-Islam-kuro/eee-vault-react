@@ -4,7 +4,7 @@ import { Home, Library, NotebookText, PlaySquare, Vault as VaultIcon } from "luc
 const TABS = [
   { to: "/", label: "Home", icon: Home, end: true },
   { to: "/vault", label: "Vault", icon: VaultIcon, end: false },
-  { to: "/videos", label: "Videos", icon: PlaySquare, end: false },
+  { to: "/videos", label: "Classes", icon: PlaySquare, end: false },
   { to: "/notes", label: "Notes", icon: NotebookText, end: false },
   { to: "/library", label: "Library", icon: Library, end: false },
 ];

@@ -11,7 +11,7 @@ const DIRECTORY_ITEMS = [
   },
   {
     to: "/videos",
-    label: "Videos",
+    label: "Classes",
     caption: "Video classes & lecture playlists",
     icon: PlaySquare,
     accent: "from-[#2f2f2f] to-[#171717]",
