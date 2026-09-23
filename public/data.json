@@ -1034,6 +1034,13 @@
       "url": "https://github.com/saidul-Islam-kuro/VAULT-Library/blob/main/introduction-to-instrumentation-and-measurements-2-edition-by-robert-b-northrop.pdf",
       "title": "Introduction to Instrumentation and Measurements",
       "author": "Robert B. Northrop"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/saidul-Islam-kuro/VAULT-Library/main/feismo.com-field-and-waves-electromagnetics-2nd-edpdf-pr_d5f4d8eecc76f51ca27798c7a4d485fa.pdf",
+      "id": "lib-19",
+      "title": "field and waves electromagnetics",
+      "edition": "2nd",
+      "author": "D.K. Cheng"
     }
   ]
 }
