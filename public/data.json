@@ -73,13 +73,7 @@
           "title": "Module 01: Basic Concepts & Laws",
           "playlistId": "",
           "type": "Playlist",
-          "classes": [
-            {
-              "type": "playlists",
-              "videoId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF",
-              "title": "Nodal Analysis"
-            }
-          ]
+          "classes": []
         },
         {
           "title": "Module 2: Network Analysis",
