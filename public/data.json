@@ -1028,6 +1028,12 @@
       "title": "Measurement and Instrumentation Principles",
       "id": "lib-17",
       "author": "Alan S Morris"
+    },
+    {
+      "id": "lib-18",
+      "url": "https://github.com/saidul-Islam-kuro/VAULT-Library/blob/main/introduction-to-instrumentation-and-measurements-2-edition-by-robert-b-northrop.pdf",
+      "title": "Introduction to Instrumentation and Measurements",
+      "author": "Robert B. Northrop"
     }
   ]
 }
