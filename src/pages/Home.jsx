@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Library, NotebookPen, PlaySquare } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Library, NotebookPen, PlaySquare, UserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DIRECTORY_ITEMS = [
@@ -30,12 +30,19 @@ const DIRECTORY_ITEMS = [
     icon: Library,
     accent: "from-[#4b4b4b] to-[#212121]",
   },
+  {
+    to: "/developer",
+    label: "About the developer",
+    caption: "Meet the student behind EEE Study Hub",
+    icon: UserRound,
+    accent: "from-[#d92a2a] to-[#a61414]",
+  },
 ];
 
 export default function Home() {
   return (
     <>
-      <section className="page-shell relative overflow-hidden rounded-[32px] border border-black/5 bg-[radial-gradient(circle_at_top_left,_rgba(217,42,42,0.10),_transparent_36%),linear-gradient(135deg,#ffffff_0%,#f7f5f2_45%,#f1efe9_100%)] p-6 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.6)] md:p-8">
+      <section className="page-shell relative overflow-hidden rounded-[32px] border border-black/5 bg-[radial-gradient(circle_at_top_left,_rgba(217,42,42,0.10),_transparent_36%),linear-gradient(135deg,#ffffff_0%,#f7f5f2_45%,#f1efe9_100%)] p-6 pb-20 shadow-[0_22px_60px_-34px_rgba(0,0,0,0.6)] md:p-8 md:pb-20">
         <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_center,_rgba(217,42,42,0.06),_transparent_50%)] md:block" />
 
         <div className="relative z-10 max-w-2xl">
@@ -64,6 +71,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <Link
+          to="/developer"
+          className="tactile absolute bottom-0 right-0 inline-flex items-center gap-2 rounded-tl-2xl rounded-br-[32px] bg-[#d92a2a] px-6 py-3.5 text-sm font-black text-white shadow-[0_-8px_24px_-12px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f]"
+        >
+          <UserRound size={17} strokeWidth={2.5} /> About the developer <ArrowRight size={16} />
+        </Link>
       </section>
 
       <section className="mt-8">
