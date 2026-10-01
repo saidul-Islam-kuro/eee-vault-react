@@ -2,12 +2,15 @@
   "name": "EEE Vault JSTU",
   "short_name": "EEE Vault",
   "description": "Question bank and study material archive for JSTU EEE.",
-  "start_url": "/",
-  "scope": "/",
+  "id": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0a0a0a",
   "theme_color": "#0a0a0a",
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/icon-192.png",
