@@ -206,9 +206,8 @@ export default function BehindTheApp() {
         <p className="mb-4 text-sm text-black/55">With thanks for being part of the work behind EEE Vault.</p>
         <ul className="divide-y divide-black/10 border-y border-black/10">
           {[ { name: "MD.Tanvir", batch: "EEE · Batch 02", note: "Provided valuable feedback"},
+          { name: "Abdullah Al Minhaz", batch: "EEE · Batch 03", note: "Helped Publishing the App"},
             {name: "Mohiuddin Rifat", batch: "EEE · Batch 04", note: "Provided Initial Resources"},
-            { name: "Abdullah Al Minhaz", batch: "EEE · Batch 03", note: "Helped Publishing the App"},
-            
             { name: "Sabbir Khandakar Saykat", batch: "EEE · Batch 04", note: "Assisted with Resources"},
             { name: "Dhruvo Acharjee", batch: "EEE · Batch 05", note: "Assisted with resources" },
           ].map((member) => (
