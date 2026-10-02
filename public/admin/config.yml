@@ -32,11 +32,11 @@ collections:
                 widget: "object"
                 collapsed: true
                 fields:
-                  - { label: "20-21", name: "20-21", widget: "list", default: [] }
-                  - { label: "21-22", name: "21-22", widget: "list", default: [] }
-                  - { label: "22-23", name: "22-23", widget: "list", default: [] }
-                  - { label: "23-24", name: "23-24", widget: "list", default: [] }
-                  - { label: "24-25", name: "24-25", widget: "list", default: [] }
+                  - { label: "20-21", name: "20-21", widget: "list", default: [], hint: "Paste GitHub blob links or raw links; blob links are converted automatically." }
+                  - { label: "21-22", name: "21-22", widget: "list", default: [], hint: "Paste GitHub blob links or raw links; blob links are converted automatically." }
+                  - { label: "22-23", name: "22-23", widget: "list", default: [], hint: "Paste GitHub blob links or raw links; blob links are converted automatically." }
+                  - { label: "23-24", name: "23-24", widget: "list", default: [], hint: "Paste GitHub blob links or raw links; blob links are converted automatically." }
+                  - { label: "24-25", name: "24-25", widget: "list", default: [], hint: "Paste GitHub blob links or raw links; blob links are converted automatically." }
 
               - label: "Course Notes"
                 name: "notes"
@@ -44,7 +44,7 @@ collections:
                 collapsed: true
                 fields:
                   - { label: "Note Name", name: "name", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", hint: "Paste a GitHub blob link or raw link. Blob links are converted automatically before download." }
 
               - label: "Video Modules"
                 name: "videos"
@@ -75,4 +75,4 @@ collections:
               - { label: "Author", name: "author", widget: "string" }
               - { label: "Edition", name: "edition", widget: "string", required: false }
               - { label: "Category", name: "category", widget: "string", required: false }
-              - { label: "Book URL", name: "url", widget: "string" }
+              - { label: "Book URL", name: "url", widget: "string", hint: "Paste a GitHub blob link or raw link. Blob links are converted automatically before download." }

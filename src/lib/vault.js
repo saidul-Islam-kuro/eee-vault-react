@@ -30,6 +30,39 @@ export function getCourseId(course) {
   return course.id || course.code;
 }
 
+export function normalizeGitHubBlobUrl(value) {
+  if (typeof value !== "string") return value;
+
+  let url;
+  try {
+    url = new URL(value);
+  } catch {
+    return value;
+  }
+
+  if (url.hostname !== "github.com") return value;
+
+  const segments = url.pathname.split("/");
+  if (segments[3] !== "blob") return value;
+
+  const [owner, repository] = segments.slice(1, 3);
+  const filePath = segments.slice(4);
+  if (!owner || !repository || filePath.length < 2) return value;
+
+  let branch;
+  let path;
+  if (filePath[0] === "refs" && filePath[1] === "heads" && filePath.length >= 4) {
+    branch = filePath[2];
+    path = filePath.slice(3);
+  } else {
+    [branch, ...path] = filePath;
+  }
+
+  if (!branch || path.length === 0) return value;
+
+  return `https://raw.githubusercontent.com/${owner}/${repository.replace(/\.git$/i, "")}/${branch}/${path.join("/")}`;
+}
+
 export function triggerDownload(url, fileName) {
   if (!url) return;
 

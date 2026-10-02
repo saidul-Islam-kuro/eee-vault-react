@@ -380,6 +380,24 @@
           "name": "VK Mehta Principles of Electronics",
           "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/1-2/vk-mehta-principles-of-electronics.pdf"
         }
+      ],
+      "videos": [
+        {
+          "type": "Playlist",
+          "title": "DC Machine",
+          "classes": [
+            {
+              "type": "Playlist",
+              "title": "DC Generator Playlist",
+              "videoId": "https://youtube.com/playlist?list=PLho7ncbqgQbsWJgoVF3N_YrdSKThT4QY8&si=o_F6nXnzkgFZxWdN"
+            },
+            {
+              "type": "Playlist",
+              "title": "DC Motor playlist",
+              "videoId": "https://youtube.com/playlist?list=PLgwYQr3eNLsrczstifgHqtVwHHnjZkkfF&si=HZfAaPnaM4pdYjFe"
+            }
+          ]
+        }
       ]
     },
     {
@@ -524,7 +542,10 @@
         "23-24": [],
         "24-25": []
       },
-      "notes": [],
+      "notes": [ {
+          "name": "Lecture Note-01(rezwan sir)",
+          "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Basic%20Mech.%20Engg.%20%E2%80%94%201.pdf"
+        }],
       "videos": [
         {
           "type": "Playlist",
