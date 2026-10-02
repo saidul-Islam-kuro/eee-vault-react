@@ -4,18 +4,36 @@ import { PlayCircle, Video, FolderOpen, ChevronRight, ArrowLeft, Search } from "
 import VideoPlayer from "../components/VideoPlayer";
 import { useVaultDataContext } from "../context/VaultDataContext";
 import { slugify } from "../lib/vault";
+import { normalizeYouTubeMedia } from "../lib/youtube";
+
+function normalizeCourseVideoItem(item, module) {
+  const media = normalizeYouTubeMedia(item);
+
+  return {
+    ...item,
+    ...media,
+    type: media.playlistId ? item?.type || "Playlist" : media.videoId ? "Lecture" : item?.type || "Lecture",
+    key: media.playlistId
+      ? `playlist-${media.playlistId}`
+      : media.videoId || `${module?.title || module?.name || "module"}-${item?.title}`,
+    moduleTitle: module?.title || module?.name || "Module",
+  };
+}
 
 function flattenCourseVideos(course) {
   if (!course || !Array.isArray(course.videos)) return [];
 
   return course.videos.flatMap((module) => {
-    if (module?.playlistId) {
+    const moduleMedia = normalizeYouTubeMedia(module);
+    if (moduleMedia.playlistId || moduleMedia.videoId) {
       return [{
         title: module.title || module.name || "Playlist",
-        playlistId: module.playlistId,
-        type: module.type || "Playlist",
+        ...moduleMedia,
+        type: moduleMedia.playlistId ? module.type || "Playlist" : "Lecture",
         moduleTitle: module.title || module.name || "Module",
-        key: `playlist-${module.playlistId}`,
+        key: moduleMedia.playlistId
+          ? `playlist-${moduleMedia.playlistId}`
+          : moduleMedia.videoId,
       }];
     }
 
@@ -27,11 +45,7 @@ function flattenCourseVideos(course) {
           ? module.playlists
           : [];
 
-    return list.map((item) => ({
-      ...item,
-      key: item.videoId || `${module?.title || module?.name || "module"}-${item.title}`,
-      moduleTitle: module?.title || module?.name || "Module",
-    }));
+    return list.map((item) => normalizeCourseVideoItem(item, module));
   });
 }
 
@@ -103,14 +117,17 @@ export default function VideosPage() {
     if (!selectedCourse || !Array.isArray(selectedCourse.videos)) return [];
 
     return selectedCourse.videos.map((module) => {
-      if (module?.playlistId) {
+      const moduleMedia = normalizeYouTubeMedia(module);
+      if (moduleMedia.playlistId || moduleMedia.videoId) {
         return {
           ...module,
           items: [{
             title: module.title || module.name || "Playlist",
-            playlistId: module.playlistId,
-            type: module.type || "Playlist",
-            key: `playlist-${module.playlistId}`,
+            ...moduleMedia,
+            type: moduleMedia.playlistId ? module.type || "Playlist" : "Lecture",
+            key: moduleMedia.playlistId
+              ? `playlist-${moduleMedia.playlistId}`
+              : moduleMedia.videoId,
             moduleTitle: module.title || module.name || "Module",
           }],
         };
@@ -126,11 +143,7 @@ export default function VideosPage() {
 
       return {
         ...module,
-        items: items.map((item) => ({
-          ...item,
-          key: item.videoId || `${module?.title || module?.name || "module"}-${item.title}`,
-          moduleTitle: module?.title || module?.name || "Module",
-        })),
+        items: items.map((item) => normalizeCourseVideoItem(item, module)),
       };
     });
   }, [selectedCourse]);

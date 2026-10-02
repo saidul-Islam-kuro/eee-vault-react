@@ -1,24 +1,14 @@
-function normalizeVideoId(value) {
-  if (!value) return "";
-
-  const raw = String(value).trim();
-  const match = raw.match(/(?:youtube\.com\/.*(?:v=|\/embed\/|\/shorts\/)|youtu\.be\/|vi\/)([A-Za-z0-9_-]{11})/i)
-    || raw.match(/([A-Za-z0-9_-]{11})/);
-
-  return match ? match[1] : raw;
-}
-
-function normalizePlaylistId(value) {
-  if (!value) return "";
-
-  const raw = String(value).trim();
-  const match = raw.match(/[?&]list=([A-Za-z0-9_-]+)/i) || raw.match(/(?:youtube\.com\/playlist\?list=|youtube\.com\/embed\/videoseries\?list=)([A-Za-z0-9_-]+)/i);
-  return match ? match[1] : raw;
-}
+import { normalizeYouTubeMedia } from "../lib/youtube";
 
 export default function VideoPlayer({ videoId, playlistId, title, className = "" }) {
-  const normalizedVideoId = normalizeVideoId(videoId);
-  const normalizedPlaylistId = normalizePlaylistId(playlistId);
+  const { videoId: normalizedVideoId, playlistId: normalizedPlaylistId } =
+    normalizeYouTubeMedia({ videoId, playlistId });
+  const embedParams = new URLSearchParams({
+    rel: "0",
+    playsinline: "1",
+    origin: window.location.origin,
+    widget_referrer: window.location.href,
+  });
 
   if (!normalizedVideoId && !normalizedPlaylistId) {
     return (
@@ -29,8 +19,8 @@ export default function VideoPlayer({ videoId, playlistId, title, className = ""
   }
 
   const src = normalizedPlaylistId
-    ? `https://www.youtube.com/embed/videoseries?list=${normalizedPlaylistId}&rel=0&modestbranding=1&playsinline=1`
-    : `https://www.youtube.com/embed/${normalizedVideoId}?rel=0&modestbranding=1&playsinline=1`;
+    ? `https://www.youtube.com/embed/videoseries?list=${normalizedPlaylistId}&${embedParams.toString()}`
+    : `https://www.youtube.com/embed/${normalizedVideoId}?${embedParams.toString()}`;
 
   return (
     <div className={`overflow-hidden rounded-[26px] border border-black/5 bg-black shadow-[0_24px_48px_-28px_rgba(0,0,0,0.7)] ${className}`}>
@@ -41,7 +31,7 @@ export default function VideoPlayer({ videoId, playlistId, title, className = ""
           title={title || "Lecture video"}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
           allowFullScreen
-          referrerPolicy="strict-origin-when-cross-origin"
+          referrerPolicy="origin"
           loading="lazy"
         />
       </div>

@@ -50,18 +50,18 @@ collections:
                 widget: "list"
                 collapsed: true
                 required: false
-                hint: "Add a full YouTube playlist with one playlistId, or add individual lecture items."
+                hint: "Paste a full YouTube video or playlist URL, or a bare ID. The player detects the media type automatically."
                 fields:
                   - { label: "Module Title", name: "title", widget: "string" }
                   - { label: "Type", name: "type", widget: "string", default: "Playlist", required: false }
-                  - { label: "Playlist ID", name: "playlistId", widget: "string", required: false, hint: "Use only the playlist ID, not the full URL. Example: PLBlnK6fEyqRhCuQsNsNXFlCNa_5_jnm1a" }
+                  - { label: "Playlist URL or ID", name: "playlistId", widget: "string", required: false, hint: "Paste a YouTube playlist URL or its ID." }
                   - label: "Lecture Items"
                     name: "classes"
                     widget: "list"
                     required: false
                     fields:
                       - { label: "Item Title", name: "title", widget: "string" }
-                      - { label: "YouTube Video ID", name: "videoId", widget: "string", hint: "Example: M7lc1UVf-VE" }
+                      - { label: "YouTube Video URL or ID", name: "videoId", widget: "string", hint: "Paste a YouTube video URL or its ID. Playlist URLs also work here." }
                       - { label: "Type", name: "type", widget: "string", default: "Lecture", required: false }
 
           - label: "Library Books"
