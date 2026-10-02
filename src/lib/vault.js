@@ -19,7 +19,8 @@ export function isMissingLink(link) {
 // Proxies any image (incl. GitHub raw) through images.weserv.nl so we can
 // normalize format/quality for the PDF compiler and AI vision calls.
 export function proxiedImage(url, { quality = 80 } = {}) {
-  return `https://images.weserv.nl/?url=${encodeURIComponent(url.replace(/^https?:\/\//, ""))}&output=jpg&q=${quality}`;
+  const imageUrl = normalizeGitHubBlobUrl(url);
+  return `https://images.weserv.nl/?url=${encodeURIComponent(imageUrl.replace(/^https?:\/\//, ""))}&output=jpg&q=${quality}`;
 }
 
 export function slugify(str) {
@@ -40,7 +41,7 @@ export function normalizeGitHubBlobUrl(value) {
     return value;
   }
 
-  if (url.hostname !== "github.com") return value;
+  if (!["github.com", "www.github.com"].includes(url.hostname.toLowerCase())) return value;
 
   const segments = url.pathname.split("/");
   if (segments[3] !== "blob") return value;
@@ -60,7 +61,80 @@ export function normalizeGitHubBlobUrl(value) {
 
   if (!branch || path.length === 0) return value;
 
-  return `https://raw.githubusercontent.com/${owner}/${repository.replace(/\.git$/i, "")}/${branch}/${path.join("/")}`;
+  return `https://raw.githubusercontent.com/${owner}/${repository.replace(/\.git$/i, "")}/${branch}/${path.join("/")}${url.search}`;
+}
+
+export function isPdfDocumentUrl(value) {
+  if (typeof value !== "string") return false;
+
+  try {
+    return decodeURIComponent(value.split(/[?#]/, 1)[0]).toLowerCase().endsWith(".pdf");
+  } catch {
+    return value.split(/[?#]/, 1)[0].toLowerCase().endsWith(".pdf");
+  }
+}
+
+export function sanitizeDownloadFileName(value, fallback = "download") {
+  let fileName = Array.from(String(value || fallback))
+    .filter((character) => character.charCodeAt(0) >= 32)
+    .join("")
+    .replace(/[\\/:*?"<>|]+/g, "_")
+    .replace(/[. ]+$/g, "")
+    .trim();
+  if (!fileName) return fallback;
+  if (/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(fileName)) fileName = `_${fileName}`;
+  return fileName;
+}
+
+export function pdfDownloadFileName(value) {
+  const fileName = sanitizeDownloadFileName(value, "download");
+  return /\.pdf$/i.test(fileName) ? fileName : `${fileName}.pdf`;
+}
+
+function isIOSBrowser() {
+  const userAgent = window.navigator?.userAgent || "";
+  const platform = window.navigator?.platform || "";
+  return /iPad|iPhone|iPod/i.test(userAgent) || (platform === "MacIntel" && window.navigator?.maxTouchPoints > 1);
+}
+
+function createIOSDownloadPage(fileName) {
+  const downloadWindow = window.open("", "_blank");
+  if (!downloadWindow) return null;
+
+  const doc = downloadWindow.document;
+  doc.title = `Preparing ${fileName}`;
+  doc.body.textContent = `Preparing ${fileName}…`;
+  return downloadWindow;
+}
+
+function renderIOSDownloadPage(downloadWindow, blobUrl, fileName) {
+  const doc = downloadWindow.document;
+  doc.title = fileName;
+  doc.body.replaceChildren();
+  doc.body.style.cssText = "font: 16px system-ui,sans-serif; padding: 24px; color: #171717;";
+
+  const heading = doc.createElement("h1");
+  heading.textContent = "Your file is ready";
+  heading.style.fontSize = "20px";
+
+  const description = doc.createElement("p");
+  description.textContent = `Tap below to save ${fileName}. If a preview opens, use Share → Save to Files.`;
+
+  const downloadLink = doc.createElement("a");
+  downloadLink.href = blobUrl;
+  downloadLink.download = fileName;
+  downloadLink.textContent = `Download ${fileName}`;
+  downloadLink.style.cssText = "display: inline-block; padding: 12px 16px; background: #b91c1c; color: white; border-radius: 10px; text-decoration: none; font-weight: 700;";
+
+  const previewLink = doc.createElement("p");
+  const preview = doc.createElement("a");
+  preview.href = blobUrl;
+  preview.target = "_blank";
+  preview.rel = "noopener";
+  preview.textContent = "Open file preview";
+  previewLink.append(preview);
+
+  doc.body.append(heading, description, downloadLink, previewLink);
 }
 
 export async function triggerDownload(url, fileName) {
@@ -69,41 +143,64 @@ export async function triggerDownload(url, fileName) {
     return false;
   }
 
-  const safeName = (fileName || "download.pdf").replace(/[\\/:*?"<>|]+/g, "_");
+  const safeName = sanitizeDownloadFileName(fileName, "download.pdf");
   const downloadUrl = normalizeGitHubBlobUrl(url);
+  const isRemoteAsset = /^https?:\/\//i.test(downloadUrl);
+  const hasSupportedFileExtension = /\.(?:pdf|png|jpe?g|webp|gif)(?:[?#]|$)/i.test(downloadUrl);
+  const isLocalAsset = !/^[a-z][a-z\d+.-]*:/i.test(downloadUrl) && hasSupportedFileExtension;
+  if (!isRemoteAsset && !isLocalAsset) {
+    window.alert("This file link isn't a valid PDF or image URL. Please ask an admin to check it.");
+    return false;
+  }
 
-  const triggerAnchor = (targetUrl) => {
-    const a = document.createElement("a");
+  const triggerAnchor = (targetUrl, targetDocument = document) => {
+    const a = targetDocument.createElement("a");
     a.href = targetUrl;
     a.download = safeName;
     a.rel = "noopener";
     a.style.display = "none";
-    document.body.appendChild(a);
+    targetDocument.body.appendChild(a);
     a.click();
     setTimeout(() => {
-      document.body.removeChild(a);
+      a.remove();
     }, 1200);
   };
 
-  const isRemoteAsset = /^https?:\/\//i.test(downloadUrl);
-
   if (isRemoteAsset) {
+    const iosDownloadWindow = isIOSBrowser() ? createIOSDownloadPage(safeName) : null;
+    if (isIOSBrowser() && !iosDownloadWindow) {
+      window.alert("Allow pop-ups for this site and try the download again.");
+      return false;
+    }
+
     try {
       const response = await fetch(downloadUrl, { mode: "cors", credentials: "omit" });
       if (!response.ok) {
         throw new Error(`Download request failed: ${response.status}`);
+      }
+      if (/text\/html/i.test(response.headers.get("content-type") || "")) {
+        throw new Error("The server returned a web page instead of the requested file.");
       }
       const blob = await response.blob();
       if (blob.size === 0) {
         throw new Error("The downloaded file was empty.");
       }
       const blobUrl = URL.createObjectURL(blob);
-      triggerAnchor(blobUrl);
-      setTimeout(() => URL.revokeObjectURL(blobUrl), 60_000);
+      if (iosDownloadWindow) {
+        renderIOSDownloadPage(iosDownloadWindow, blobUrl, safeName);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 5 * 60_000);
+      } else {
+        triggerAnchor(blobUrl);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 60_000);
+      }
       return true;
     } catch (error) {
+      iosDownloadWindow?.close();
       console.error("Document download failed.", error);
-      window.alert("Couldn't download this file. Make sure the GitHub repository is public and try again.");
+      const detail = error instanceof TypeError
+        ? "The public file couldn't be fetched (network or browser CORS restriction)."
+        : error.message;
+      window.alert(`Couldn't download this file. ${detail} Check that the GitHub repository is public and try again.`);
       return false;
     }
   }

@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, ChevronDown, FileText, Download, CloudDownload, Inbox } from "lucide-react";
 import { useVaultDataContext } from "../context/VaultDataContext";
-import { getCourseId, SEMESTERS, triggerDownload } from "../lib/vault";
+import { getCourseId, pdfDownloadFileName, SEMESTERS, triggerDownload } from "../lib/vault";
 import SemesterSheet from "../components/SemesterSheet";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { useConfirmDialog } from "../hooks/useConfirmDialog";
@@ -41,7 +41,7 @@ export default function Notes() {
       confirmTone: "red",
       onConfirm: () => {
         confirmDialog.close();
-        triggerDownload(note.url, `${note.name}.pdf`);
+        triggerDownload(note.url, pdfDownloadFileName(note.name));
       },
     });
   }

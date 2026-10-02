@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, BookOpen, Download, CloudDownload } from "lucide-react";
 import { useVaultDataContext } from "../context/VaultDataContext";
-import { triggerDownload } from "../lib/vault";
+import { pdfDownloadFileName, triggerDownload } from "../lib/vault";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { useConfirmDialog } from "../hooks/useConfirmDialog";
 
@@ -34,7 +34,7 @@ export default function Library() {
       confirmTone: "red",
       onConfirm: () => {
         confirmDialog.close();
-        triggerDownload(book.url, `${book.title}.pdf`);
+        triggerDownload(book.url, pdfDownloadFileName(book.title));
       },
     });
   }

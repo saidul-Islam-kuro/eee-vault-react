@@ -8,6 +8,8 @@ import { useConfirmDialog } from "../hooks/useConfirmDialog";
 import { useVaultDataContext } from "../context/VaultDataContext";
 import { compilePagesToPdf } from "../lib/pdfCompile";
 import { useAppNavigate } from "../hooks/useAppNavigate";
+import { isPdfDocumentUrl, normalizeGitHubBlobUrl, pdfDownloadFileName, triggerDownload } from "../lib/vault";
+import PdfDocument from "../components/PdfDocument";
 
 export default function ViewerPage() {
   const { code, batch } = useParams();
@@ -26,7 +28,8 @@ export default function ViewerPage() {
     [courseData, decodedCourseId]
   );
   const rawLink = course?.links ? course.links[decodedBatch] : null;
-  const pages = Array.isArray(rawLink) ? rawLink : rawLink ? [rawLink] : [];
+  const pages = (Array.isArray(rawLink) ? rawLink : rawLink ? [rawLink] : []).map(normalizeGitHubBlobUrl);
+  const existingPdf = pages.find(isPdfDocumentUrl);
   const title = course ? `${course.title} - ${decodedBatch}` : "Paper not found";
 
   function handleClose() {
@@ -45,8 +48,8 @@ export default function ViewerPage() {
         setIsCompiling(true);
         try {
           await compilePagesToPdf(pages, title);
-        } catch {
-          window.alert("Download error.");
+        } catch (error) {
+          window.alert(error.message || "Couldn't compile the document.");
         } finally {
           setIsCompiling(false);
         }
@@ -84,7 +87,14 @@ export default function ViewerPage() {
             >
               <Bot size={14} /> AI
             </button>
-            {isCompiling ? (
+            {existingPdf ? (
+              <button
+                onClick={() => triggerDownload(existingPdf, pdfDownloadFileName(title))}
+                className="tactile px-3 py-2 rounded-xl text-xs font-bold bg-emerald-500/10 border border-emerald-500/40 text-emerald-500 flex items-center gap-1"
+              >
+                <FileDown size={14} /> Download PDF
+              </button>
+            ) : isCompiling ? (
               <div className="flex items-center justify-center px-3 py-2">
                 <div className="loader-ring" />
               </div>
@@ -108,19 +118,10 @@ export default function ViewerPage() {
         <div className="flex-grow bg-black relative overflow-y-auto no-scrollbar">
           <div className="w-full">
             {pages.map((url, i) => {
-              const isPdf = /\.pdf(?:\?|$)/i.test(url);
-              const iframeSrc = isPdf ? `https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(url)}` : url;
+              const isPdf = isPdfDocumentUrl(url);
 
               return isPdf ? (
-                <div key={`${url}-${i}`} className="viewer-page-frame w-full h-[calc(100vh-64px)] bg-white">
-                  <iframe
-                    src={iframeSrc}
-                    title={`${title}-${i + 1}`}
-                    className="w-full h-full border-0"
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </div>
+                <PdfDocument key={`${url}-${i}`} src={url} title={`${title}-${i + 1}`} />
               ) : (
                 <ZoomableImage key={`${url}-${i}`} src={url} />
               );
