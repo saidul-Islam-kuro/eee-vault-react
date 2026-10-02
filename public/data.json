@@ -84,17 +84,17 @@
               "type": "Lecture"
             },
             {
-              "title": "Lecture 4 - Mesh and Nodal Analysis",
+              "title": "Lecture 4 - Mesh  Analysis",
               "playlistId": "PLBlnK6fEyqRhCuQsNsNXFlCNa_5_jnm1a",
               "type": "Playlist",
               "videoId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF"
+            },
+            {
+              "type": "playlist",
+              "title": "Nodal Analysis",
+              "videoId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF"
             }
           ]
-        },
-        {
-          "type": "Playlist",
-          "title": "MATH",
-          "playlistId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF"
         }
       ]
     },
