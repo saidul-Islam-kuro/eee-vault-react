@@ -27,7 +27,7 @@ export default function ViewerPage() {
   const title = course ? `${course.title} - ${decodedBatch}` : "Paper not found";
 
   function handleClose() {
-    navigate("/");
+    navigate("/vault", { replace: true });
   }
 
   function requestPdf() {
@@ -56,7 +56,7 @@ export default function ViewerPage() {
       <div className="fixed inset-0 z-[100] bg-[#111111] flex flex-col items-center justify-center gap-4 text-white p-6 text-center">
         <p className="font-bold uppercase tracking-wide text-sm text-white/70">This paper couldn't be found.</p>
         <button onClick={handleClose} className="tactile bg-[#d92a2a] px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2">
-          <ArrowLeft size={16} /> Back to Home
+          <ArrowLeft size={16} /> Back to Vault
         </button>
       </div>
     );

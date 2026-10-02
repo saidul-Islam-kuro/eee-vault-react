@@ -25,7 +25,8 @@ export default function Vault() {
   const [semSheetOpen, setSemSheetOpen] = useState(false);
 
   const saveVaultScroll = () => {
-    sessionStorage.setItem("vaultScroll", String(window.scrollY || 0));
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    sessionStorage.setItem("vaultScroll", String(scrollTop));
   };
 
   useEffect(() => {
@@ -45,7 +46,8 @@ export default function Vault() {
     if (!Number.isFinite(savedScroll) || savedScroll <= 0) return;
 
     const restoreScroll = () => {
-      window.scrollTo({ top: savedScroll, left: 0, behavior: "auto" });
+      document.body.scrollTop = savedScroll;
+      document.documentElement.scrollTop = savedScroll;
     };
 
     requestAnimationFrame(restoreScroll);
@@ -59,8 +61,8 @@ export default function Vault() {
       saveVaultScroll();
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.body.addEventListener("scroll", handleScroll, { passive: true });
+    return () => document.body.removeEventListener("scroll", handleScroll);
   }, []);
 
   const filtered = useMemo(() => {
