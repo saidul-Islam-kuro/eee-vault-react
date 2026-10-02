@@ -106,7 +106,7 @@ export default function DeveloperProfile() {
               </a>
             ))}
           </div>
-          <div className="mt-3 flex items-center gap-2 border-t border-black/5 pt-4 text-sm text-black/65"><MapPin size={16} className="shrink-0 text-[#d92a2a]" /> Home district: Chandpur</div>
+         
         </div>
       </section>
     </div>
