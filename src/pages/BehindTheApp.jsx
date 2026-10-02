@@ -16,7 +16,7 @@ const CORE_TEAM = [
     name: "Alim Hossain Salman",
     role: "Team lead",
     batch: "EEE · Batch 03",
-    image: "/salmanvai.jpg",
+    image: "/salmanvai.jpeg",
     bio: "Helped lead the team and keep the work moving toward a resource students can use in their everyday studies.",
     note: "The best part is knowing these resources can help the next student who needs them.",
   },
