@@ -73,10 +73,10 @@ export default function Home() {
         </div>
 
         <Link
-          to="/developer"
+          to="/behind-the-app"
           className="tactile absolute bottom-0 right-0 inline-flex items-center gap-2 rounded-tl-2xl rounded-br-[32px] bg-[#d92a2a] px-6 py-3.5 text-sm font-black text-white shadow-[0_-8px_24px_-12px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d92a2a]"
         >
-          <UserRound size={17} strokeWidth={2.5} /> About the developer <ArrowRight size={16} />
+          <UsersRound size={17} strokeWidth={2.5} /> Behind the app <ArrowRight size={16} />
         </Link>
       </section>
 
@@ -84,10 +84,10 @@ export default function Home() {
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-xl font-black tracking-[-0.04em] text-black">Explore</h2>
           <Link
-            to="/behind-the-app"
+            to="/developer"
             className="tactile inline-flex items-center gap-2 rounded-full bg-[#d92a2a] px-4 py-2.5 text-xs font-black text-white shadow-[0_10px_24px_-14px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d92a2a]"
           >
-            <UsersRound size={15} /> Behind the app <ArrowRight size={14} />
+            <UserRound size={15} /> About the developer <ArrowRight size={14} />
           </Link>
         </div>
 

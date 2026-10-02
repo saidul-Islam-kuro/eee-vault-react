@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Bot, FileDown, X, ArrowLeft } from "lucide-react";
 import ZoomableImage from "../components/ZoomableImage";
 import AiChatPanel from "../components/AiChatPanel";
@@ -7,10 +7,11 @@ import ConfirmDialog from "../components/ConfirmDialog";
 import { useConfirmDialog } from "../hooks/useConfirmDialog";
 import { useVaultDataContext } from "../context/VaultDataContext";
 import { compilePagesToPdf } from "../lib/pdfCompile";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 export default function ViewerPage() {
   const { code, batch } = useParams();
-  const navigate = useNavigate();
+  const navigate = useAppNavigate();
   const { courseData } = useVaultDataContext();
   const confirmDialog = useConfirmDialog();
 
@@ -26,12 +27,7 @@ export default function ViewerPage() {
   const title = course ? `${course.title} - ${decodedBatch}` : "Paper not found";
 
   function handleClose() {
-    if (window.history.length > 1) {
-      navigate(-1);
-      return;
-    }
-
-    navigate("/vault");
+    navigate("/");
   }
 
   function requestPdf() {

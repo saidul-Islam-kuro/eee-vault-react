@@ -1,5 +1,6 @@
 import { ArrowLeft, Camera, Heart, UserRound, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 const CORE_TEAM = [
   {
@@ -82,11 +83,16 @@ function SectionTitle({ children, note }) {
 }
 
 export default function BehindTheApp() {
+  const navigate = useAppNavigate();
+
   return (
     <div className="page-shell mx-auto max-w-5xl text-[#191716]">
       <Link
         to="/"
-        replace
+        onClick={(event) => {
+          event.preventDefault();
+          navigate("/");
+        }}
         className="tactile mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-bold text-black/75 shadow-sm hover:text-[#d92a2a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d92a2a]"
       >
         <ArrowLeft size={16} /> Home

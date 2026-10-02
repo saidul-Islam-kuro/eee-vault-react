@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { PlayCircle, Video, FolderOpen, ChevronRight, ArrowLeft, Search } from "lucide-react";
 import VideoPlayer from "../components/VideoPlayer";
 import { useVaultDataContext } from "../context/VaultDataContext";
 import { slugify } from "../lib/vault";
 import { normalizeYouTubeMedia } from "../lib/youtube";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 function normalizeCourseVideoItem(item, module) {
   const media = normalizeYouTubeMedia(item);
@@ -52,7 +53,7 @@ function flattenCourseVideos(course) {
 export default function VideosPage() {
   const { courseData, status } = useVaultDataContext();
   const { courseCode } = useParams();
-  const navigate = useNavigate();
+  const navigate = useAppNavigate();
   const [query, setQuery] = useState("");
   const [selectedCourseCode, setSelectedCourseCode] = useState(courseCode || "");
   const [activeMediaKey, setActiveMediaKey] = useState("");

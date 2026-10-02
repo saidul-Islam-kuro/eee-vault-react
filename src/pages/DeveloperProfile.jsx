@@ -11,6 +11,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 const SOCIAL_LINKS = [
   { label: "GitHub", href: "https://github.com/saidul-Islam-kuro", icon: Code2 },
@@ -25,9 +26,18 @@ const CONTACT_LINKS = [
 ];
 
 export default function DeveloperProfile() {
+  const navigate = useAppNavigate();
+
   return (
     <div className="page-shell mx-auto max-w-4xl">
-      <Link to="/" replace className="tactile mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-bold text-black/75 shadow-sm hover:text-[#d92a2a]">
+      <Link
+        to="/"
+        onClick={(event) => {
+          event.preventDefault();
+          navigate("/");
+        }}
+        className="tactile mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-bold text-black/75 shadow-sm hover:text-[#d92a2a]"
+      >
         <ArrowLeft size={16} /> Home
       </Link>
 

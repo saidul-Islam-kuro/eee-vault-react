@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import { Search, ChevronDown } from "lucide-react";
 import CourseCard from "../components/CourseCard";
 import SemesterSheet from "../components/SemesterSheet";
 import { useVaultDataContext } from "../context/VaultDataContext";
 import { slugify } from "../lib/vault";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 const getStoredVaultState = () => ({
   query: sessionStorage.getItem("vault.query") || "",
@@ -15,7 +16,7 @@ const getStoredVaultState = () => ({
 export default function Vault() {
   const { courseData, status } = useVaultDataContext();
   const { openUpload } = useOutletContext();
-  const navigate = useNavigate();
+  const navigate = useAppNavigate();
 
   const initialState = getStoredVaultState();
   const [query, setQuery] = useState(initialState.query);

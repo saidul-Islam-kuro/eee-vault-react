@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Home, Library, NotebookText, PlaySquare, Vault as VaultIcon } from "lucide-react";
+import { useAppNavigate } from "../hooks/useAppNavigate";
 
 const TABS = [
   { to: "/", label: "Home", icon: Home, end: true },
@@ -10,6 +11,8 @@ const TABS = [
 ];
 
 export default function BottomNav() {
+  const navigate = useAppNavigate();
+
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-[#191919]/95 backdrop-blur-md"
@@ -21,6 +24,10 @@ export default function BottomNav() {
             key={to}
             to={to}
             end={end}
+            onClick={(event) => {
+              event.preventDefault();
+              navigate(to);
+            }}
             className="group relative flex-1 px-2 py-2.5"
           >
             {({ isActive }) => (
