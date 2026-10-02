@@ -1,4 +1,4 @@
-import { ArrowLeft, Camera, Heart, UserRound, UsersRound } from "lucide-react";
+import { ArrowLeft, Brain, Heart, UserRound, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAppNavigate } from "../hooks/useAppNavigate";
 
@@ -101,20 +101,37 @@ export default function BehindTheApp() {
 
       <header className="overflow-hidden rounded-[26px] bg-[#211d1b] text-white shadow-[0_24px_58px_-36px_rgba(0,0,0,0.65)]">
         <div
-          className="relative flex min-h-[190px] items-center justify-center overflow-hidden border-b border-white/10 px-5 py-10 text-center md:min-h-[250px]"
+          className="relative flex min-h-[170px] items-center justify-center overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_center,_rgba(217,42,42,0.2),_transparent_48%),linear-gradient(115deg,#141313,#29211f_52%,#151313)] md:min-h-[220px]"
           role="img"
-          aria-label="Placeholder for a group photo of the EEE Vault team"
+          aria-label="Abstract electrical circuit graphic representing EEE Vault"
         >
-          <div className="absolute inset-0 opacity-25" aria-hidden="true">
-            <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full border border-white/35" />
-            <div className="absolute -left-10 top-1/2 h-52 w-52 -translate-y-1/2 rounded-full border border-white/35" />
-            <div className="absolute right-0 top-0 h-full w-1/2 bg-[linear-gradient(135deg,transparent_45%,rgba(217,42,42,0.72)_45%,rgba(217,42,42,0.72)_62%,transparent_62%)]" />
-          </div>
-          <div className="relative flex flex-col items-center">
-            <Camera size={26} strokeWidth={1.5} className="text-white/80" />
-            <p className="mt-3 text-sm font-semibold">Team portrait</p>
-            <p className="mt-1 text-xs text-white/55">Group photo placeholder</p>
-          </div>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 1200 280"
+            preserveAspectRatio="xMidYMid meet"
+            className="absolute inset-0 h-full w-full"
+            fill="none"
+          >
+            <g stroke="#d7bd82" strokeOpacity=".42" strokeWidth="1.5">
+              <path d="M0 70h205l42 42h167m-414 98h168l46-46h200M1200 70H995l-42 42H786m414 98h-168l-46-46H786" />
+              <path d="M0 140h300m900 0H900" stroke="#ed5149" strokeOpacity=".6" />
+              <circle cx="205" cy="70" r="4" fill="#d7bd82" />
+              <circle cx="167" cy="210" r="4" fill="#d7bd82" />
+              <circle cx="995" cy="70" r="4" fill="#d7bd82" />
+              <circle cx="1033" cy="210" r="4" fill="#d7bd82" />
+              <circle cx="300" cy="140" r="4" fill="#ed5149" />
+              <circle cx="900" cy="140" r="4" fill="#ed5149" />
+            </g>
+            <circle cx="600" cy="140" r="82" stroke="#d7bd82" strokeOpacity=".22" />
+            <circle cx="600" cy="140" r="64" stroke="#d7bd82" strokeOpacity=".65" strokeWidth="1.5" />
+            <circle cx="600" cy="140" r="52" fill="#211d1b" stroke="#ed5149" strokeOpacity=".6" />
+          </svg>
+          <Brain
+            aria-hidden="true"
+            size={48}
+            strokeWidth={1.8}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#ed5149]"
+          />
         </div>
         <div className="grid gap-5 px-6 py-7 md:grid-cols-[1fr_auto] md:items-end md:px-10 md:py-9">
           <div>
@@ -148,20 +165,6 @@ export default function BehindTheApp() {
         </div>
       </section>
 
-      <section className="mt-10" aria-labelledby="production-heading">
-        <SectionTitle note="EEE · 3rd batch">Production aid</SectionTitle>
-        <div className="grid max-w-2xl overflow-hidden rounded-[22px] border border-black/[0.08] bg-white shadow-[0_18px_44px_-36px_rgba(0,0,0,0.55)] sm:grid-cols-[200px_1fr]">
-          <Portrait member={{ name: "Abdullah Al Minhaz", image: "/minhazvai.jpg" }} className="aspect-[5/3] sm:aspect-auto sm:min-h-[170px]" />
-          <div className="flex items-center p-5 md:p-7">
-            <div>
-              <p className="text-sm font-bold text-[#b51f1f]">Production aid</p>
-              <h3 className="mt-2 text-2xl font-black tracking-[-0.045em]">Abdullah Al Minhaz</h3>
-              <p className="mt-1 text-sm text-black/55">EEE · 3rd batch</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="relative mt-10 overflow-hidden rounded-[28px] border border-[#c7a96b]/35 bg-[#211d1b] px-6 py-10 text-center text-white shadow-[0_26px_60px_-34px_rgba(0,0,0,0.7)] md:px-12 md:py-14" aria-labelledby="tribute-heading">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7bd82] to-transparent" />
@@ -191,31 +194,7 @@ export default function BehindTheApp() {
         </div>
       </section>
 
-      <section className="mt-10" aria-labelledby="resources-heading">
-        <div className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white shadow-[0_20px_46px_-34px_rgba(0,0,0,0.35)]">
-          <div className="bg-[#f3f0ec] px-6 py-6 text-[#191716] md:px-8">
-            <h2 id="resources-heading" className="text-2xl font-black tracking-[-0.05em]">Resource management</h2>
-          </div>
-          <div className="grid gap-3 bg-[#faf9f7] p-3 sm:grid-cols-2 md:p-4">
-            {[
-              { name: "Mohiuddin Rifat", batch: "EEE · Batch 04", image: "/mohiuddin%20rifat.jpg" },
-              { name: "Dhruvo Acharjee", batch: "EEE · Batch 05", image: "/Dhruvo%20acharjee.jpg" },
-            ].map((member) => (
-              <div key={member.name} className="flex items-center gap-4 rounded-[16px] border border-black/[0.06] bg-white px-5 py-4 shadow-[0_8px_20px_-16px_rgba(0,0,0,0.35)]">
-                <img
-                  src={member.image}
-                  alt=""
-                  className="h-14 w-14 shrink-0 rounded-full border border-black/10 object-cover object-center"
-                />
-                <div>
-                  <p className="text-lg font-bold text-black">{member.name}</p>
-                  <p className="mt-1 text-sm text-black/55">{member.batch}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <section className="mt-10" aria-labelledby="honourable-heading">
         <div className="mb-4 flex items-center gap-3">
@@ -224,16 +203,20 @@ export default function BehindTheApp() {
         </div>
         <p className="mb-4 text-sm text-black/55">With thanks for being part of the work behind EEE Vault.</p>
         <ul className="divide-y divide-black/10 border-y border-black/10">
-          <li className="flex flex-wrap items-center justify-between gap-2 py-4">
-            <div>
-              <span className="font-bold text-black">Tanvir Ahmed</span>
-              <p className="mt-1 text-sm text-black/55">EEE · Batch 02</p>
-            </div>
-          </li>
-          <li className="flex flex-wrap items-center justify-between gap-2 py-4">
-            <span className="font-bold text-black">Sabbir Khandakar Saykat</span>
-            <span className="text-sm text-black/55">EEE · Batch 04</span>
-          </li>
+          {[ {name: "Mohiuddin Rifat", batch: "EEE · Batch 04", note: "Provided Initial Resources"},
+            { name: "Abdullah Al Minhaz", batch: "EEE · Batch 03", note: "Helped Publishing the App"},
+            { name: "Tanvir Ahmed", batch: "EEE · Batch 02", note: "Provided valuable feedback"},
+            { name: "Sabbir Khandakar Saykat", batch: "EEE · Batch 04", note: "Assisted with Resources"},
+            { name: "Dhruvo Acharjee", batch: "EEE · Batch 05", note: "Assisted with resources" },
+          ].map((member) => (
+            <li key={member.name} className="flex flex-wrap items-center justify-between gap-2 py-4">
+              <div>
+                <span className="font-bold text-black">{member.name}</span>
+                <p className="mt-1 text-sm text-black/55">{member.batch}</p>
+                {member.note && <p className="mt-1 text-sm text-black/65">{member.note}</p>}
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
 
