@@ -542,7 +542,12 @@
         "23-24": [],
         "24-25": []
       },
-      "notes": [],
+      "notes": [
+        {
+          "name": "Lecture 1 ",
+          "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Basic%20Mech.%20Engg.%20%E2%80%94%201.pdf"
+        }
+      ],
       "videos": []
     },
     {
