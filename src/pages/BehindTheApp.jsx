@@ -151,21 +151,7 @@ export default function BehindTheApp() {
         </div>
       </header>
 
-      <section className="mt-10" aria-labelledby="core-team-heading">
-        <SectionTitle note="Vision, leadership, design & development">The core team</SectionTitle>
-        <div className="overflow-hidden rounded-[26px] border border-black/[0.08] bg-white shadow-[0_24px_54px_-34px_rgba(0,0,0,0.42)] ring-1 ring-white">
-          <Profile member={CORE_TEAM[0]} />
-        </div>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {CORE_TEAM.slice(1).map((member) => (
-            <div key={member.name} className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white shadow-[0_20px_48px_-34px_rgba(0,0,0,0.48)] ring-1 ring-white">
-              <Profile member={member} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="relative mt-10 overflow-hidden rounded-[28px] border border-[#c7a96b]/35 bg-[#211d1b] px-6 py-10 text-center text-white shadow-[0_26px_60px_-34px_rgba(0,0,0,0.7)] md:px-12 md:py-14" aria-labelledby="tribute-heading">
+       <section className="relative mt-10 overflow-hidden rounded-[28px] border border-[#c7a96b]/35 bg-[#211d1b] px-6 py-10 text-center text-white shadow-[0_26px_60px_-34px_rgba(0,0,0,0.7)] md:px-12 md:py-14" aria-labelledby="tribute-heading">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7bd82] to-transparent" />
           <div className="absolute -left-28 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full border border-[#d7bd82]/40" />
@@ -193,6 +179,22 @@ export default function BehindTheApp() {
           </p>
         </div>
       </section>
+
+      <section className="mt-10" aria-labelledby="core-team-heading">
+        <SectionTitle note="Vision, leadership, design & development">The core team</SectionTitle>
+        <div className="overflow-hidden rounded-[26px] border border-black/[0.08] bg-white shadow-[0_24px_54px_-34px_rgba(0,0,0,0.42)] ring-1 ring-white">
+          <Profile member={CORE_TEAM[0]} />
+        </div>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {CORE_TEAM.slice(1).map((member) => (
+            <div key={member.name} className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white shadow-[0_20px_48px_-34px_rgba(0,0,0,0.48)] ring-1 ring-white">
+              <Profile member={member} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+     
 
       
 
