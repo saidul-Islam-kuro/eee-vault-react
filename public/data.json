@@ -1,6 +1,7 @@
 {
   "Course": [
     {
+      "id": "eee-1111-electrical-circuit-i",
       "semester": "1st Year 1st Semester",
       "title": "Electrical Circuit I",
       "code": "EEE 1111",
@@ -131,6 +132,7 @@
       ]
     },
     {
+      "id": "hum-1111-technical-and-communicative-english",
       "semester": "1st Year 1st Semester",
       "title": "Technical and Communicative English",
       "code": "HUM 1111",
@@ -195,6 +197,7 @@
       ]
     },
     {
+      "id": "math-1111-differential-and-integral-calculus",
       "semester": "1st Year 1st Semester",
       "title": "Differential and Integral Calculus",
       "code": "MATH 1111",
@@ -245,6 +248,7 @@
       ]
     },
     {
+      "id": "phy-1111-physics",
       "semester": "1st Year 1st Semester",
       "title": "Physics",
       "code": "PHY 1111",
@@ -282,6 +286,7 @@
       ]
     },
     {
+      "id": "cse-1111-computer-programming",
       "semester": "1st Year 1st Semester",
       "title": "Computer Programming",
       "code": "CSE 1111",
@@ -324,6 +329,7 @@
       ]
     },
     {
+      "id": "eee-1211-electrical-circuit-ii",
       "semester": "1st Year 2nd Semester",
       "title": "Electrical Circuit II",
       "code": "EEE 1211",
@@ -344,6 +350,7 @@
       "notes": []
     },
     {
+      "id": "eee-1221-electronic-device-and-circuit-i",
       "semester": "1st Year 2nd Semester",
       "title": "Electronic Device and Circuit I",
       "code": "EEE 1221",
@@ -376,8 +383,9 @@
       ]
     },
     {
+      "id": "hum-1211-accounting-and-economics",
       "semester": "1st Year 2nd Semester",
-      "title": "Accounting and Economics for Engineers",
+      "title": "Accounting and Economics",
       "code": "HUM 1211",
       "links": {
         "20-21": [
@@ -398,8 +406,9 @@
       "notes": []
     },
     {
+      "id": "math-1211-linear-algebra-coordinate-geometry-vector-analysis",
       "semester": "1st Year 2nd Semester",
-      "title": "Linear Algebra and Vector Analysis",
+      "title": "Linear Algebra, Coordinate Geometry and Vector Analysis",
       "code": "MATH 1211",
       "links": {
         "20-21": [],
@@ -426,6 +435,7 @@
       ]
     },
     {
+      "id": "chem-1211-chemistry",
       "semester": "1st Year 2nd Semester",
       "title": "Chemistry",
       "code": "CHEM 1211",
@@ -448,114 +458,10 @@
       "notes": []
     },
     {
+      "id": "eee-2111-electrical-machine-i",
       "semester": "2nd Year 1st Semester",
-      "title": "Electrical Engineering Materials",
-      "code": "EEE 2111",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P2.jpeg"
-        ],
-        "21-22": [],
-        "22-23": [],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 1st Semester",
-      "title": "Electronic Device and Circuit II",
-      "code": "EEE 2121",
-      "links": {
-        "20-21": [],
-        "21-22": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p3.jpg"
-        ],
-        "22-23": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg"
-        ],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 1st Semester",
-      "title": "Basic Mechanical Engineering",
-      "code": "ME 2111",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P2.jpeg"
-        ],
-        "21-22": [],
-        "22-23": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p2.jpg"
-        ],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 1st Semester",
-      "title": "Statistics for Engineers",
-      "code": "STAT 2111",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P2.jpeg"
-        ],
-        "21-22": [],
-        "22-23": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p2.jpg"
-        ],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 1st Semester",
-      "title": "Legal Issues and Professional Ethics for Engineers",
-      "code": "HUM 2121",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/LEGALISSUES-P1.jpeg"
-        ],
-        "21-22": [],
-        "22-23": [],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 2nd Semester",
-      "title": "Electronic Device and Circuit III",
-      "code": "EEE 2211",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DEVICE-3-P1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/DEVICE-3-P2.jpeg"
-        ],
-        "21-22": [],
-        "22-23": [],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
-      "semester": "2nd Year 2nd Semester",
       "title": "Electrical Machine I",
-      "code": "EEE 2221",
+      "code": "EEE 2111",
       "links": {
         "20-21": [
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-1-p1.jpeg",
@@ -580,6 +486,117 @@
       "notes": []
     },
     {
+      "id": "eee-2121-electronic-device-and-circuit-ii",
+      "semester": "2nd Year 1st Semester",
+      "title": "Electronic Device and Circuit II",
+      "code": "EEE 2121",
+      "links": {
+        "20-21": [],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electronic%20Device%20and%20Circuit%20II-p3.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electronic%20Device%20and%20Circuit%20II-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "me-2111-basic-mechanical-engineering",
+      "semester": "2nd Year 1st Semester",
+      "title": "Basic Mechanical Engineering",
+      "code": "ME 2111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p2.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "math-2111-differential-equation-laplace-fourier",
+      "semester": "2nd Year 1st Semester",
+      "title": "Differential Equation, Laplace Transform and Fourier Analysis",
+      "code": "MATH 2111",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p4.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "eee-2113-engineering-materials",
+      "semester": "2nd Year 1st Semester",
+      "title": "Engineering Materials",
+      "code": "EEE 2113",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/ENG-MATEROALS-P2.jpeg"
+        ],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "eee-2211-electrical-machine-ii",
+      "semester": "2nd Year 2nd Semester",
+      "title": "Electrical Machine II",
+      "code": "EEE 2211",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p3.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p4.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p5.jpeg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electrical%20Machine%20II.jpg"
+        ],
+        "22-23": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p3.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p4.jpg"
+        ],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "eee-2231-digital-electronics",
       "semester": "2nd Year 2nd Semester",
       "title": "Digital Electronics",
       "code": "EEE 2231",
@@ -613,6 +630,7 @@
       ]
     },
     {
+      "id": "eee-2241-computational-methods-for-engineers",
       "semester": "2nd Year 2nd Semester",
       "title": "Computational Methods for Engineers",
       "code": "EEE 2241",
@@ -637,23 +655,33 @@
       "notes": []
     },
     {
+      "id": "ipe-2211-industrial-management",
       "semester": "2nd Year 2nd Semester",
-      "title": "Fourier Analysis, Laplace Transform and Differential Equation",
-      "code": "MATH 2211",
+      "title": "Industrial Management",
+      "code": "IPE 2211",
+      "links": {
+        "20-21": [],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "stat-2211-statistics-data-analysis",
+      "semester": "2nd Year 2nd Semester",
+      "title": "Statistics and Data Analysis",
+      "code": "STAT 2211",
       "links": {
         "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/STATS-P2.jpeg"
         ],
-        "21-22": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg"
-        ],
+        "21-22": [],
         "22-23": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p2.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p3.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Fourier%20Analysis%2C%20Laplace%20Transform%20and%20Differential%20Equation-p4.jpg"
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Statistics%20for%20Engineers-p2.jpg"
         ],
         "23-24": [],
         "24-25": []
@@ -661,8 +689,9 @@
       "notes": []
     },
     {
+      "id": "eee-3111-measurement-and-instrumentation",
       "semester": "3rd Year 1st Semester",
-      "title": "Measurement & Instrumentation",
+      "title": "Measurement and Instrumentation",
       "code": "EEE 3111",
       "links": {
         "20-21": [
@@ -682,32 +711,7 @@
       "notes": []
     },
     {
-      "semester": "3rd Year 1st Semester",
-      "title": "Electrical Machine II",
-      "code": "EEE 3121",
-      "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p2.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p3.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p4.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/machine-2-p5.jpeg"
-        ],
-        "21-22": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Electrical%20Machine%20II.jpg"
-        ],
-        "22-23": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p2.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p3.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Electrical%20Machine%20II-p4.jpg"
-        ],
-        "23-24": [],
-        "24-25": []
-      },
-      "notes": []
-    },
-    {
+      "id": "eee-3131-microprocessor-and-microcontroller",
       "semester": "3rd Year 1st Semester",
       "title": "Microprocessor and Microcontroller",
       "code": "EEE 3131",
@@ -729,6 +733,7 @@
       "notes": []
     },
     {
+      "id": "eee-3141-power-electronics",
       "semester": "3rd Year 1st Semester",
       "title": "Power Electronics",
       "code": "EEE 3141",
@@ -750,6 +755,7 @@
       "notes": []
     },
     {
+      "id": "eee-3151-signals-and-linear-systems",
       "semester": "3rd Year 1st Semester",
       "title": "Signals and Linear Systems",
       "code": "EEE 3151",
@@ -767,6 +773,28 @@
       "notes": []
     },
     {
+      "id": "eee-3161-engineering-electromagnetics",
+      "semester": "3rd Year 1st Semester",
+      "title": "Engineering Electromagnetics",
+      "code": "EEE 3161",
+      "links": {
+        "20-21": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p1.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p2.jpg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p3.jpg"
+        ],
+        "21-22": [
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p2.jpeg"
+        ],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "eee-3211-communication-engineering-i",
       "semester": "3rd Year 2nd Semester",
       "title": "Communication Engineering I",
       "code": "EEE 3211",
@@ -786,6 +814,7 @@
       "notes": []
     },
     {
+      "id": "eee-3221-power-system-i",
       "semester": "3rd Year 2nd Semester",
       "title": "Power System I",
       "code": "EEE 3221",
@@ -807,8 +836,9 @@
       "notes": []
     },
     {
+      "id": "eee-3231-power-plant-engineering-environmental-issues",
       "semester": "3rd Year 2nd Semester",
-      "title": "Power Plant Engineering and Economy",
+      "title": "Power Plant Engineering and Environmental Issues",
       "code": "EEE 3231",
       "links": {
         "20-21": [
@@ -823,6 +853,7 @@
       "notes": []
     },
     {
+      "id": "eee-3241-control-systems",
       "semester": "3rd Year 2nd Semester",
       "title": "Control Systems",
       "code": "EEE 3241",
@@ -848,19 +879,15 @@
       "notes": []
     },
     {
+      "id": "eee-3251-professional-ethics-entrepreneurship",
       "semester": "3rd Year 2nd Semester",
-      "title": "Engineering Electromagnetics",
+      "title": "Professional Ethics and Entrepreneurship",
       "code": "EEE 3251",
       "links": {
         "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p1.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p2.jpg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Engineering%20Electromagnetics-p3.jpg"
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/LEGALISSUES-P1.jpeg"
         ],
-        "21-22": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-21-22/main/Engineering%20Electromagnetics-p2.jpeg"
-        ],
+        "21-22": [],
         "22-23": [],
         "23-24": [],
         "24-25": []
@@ -868,6 +895,7 @@
       "notes": []
     },
     {
+      "id": "eee-4111-communication-engineering-ii",
       "semester": "4th Year 1st Semester",
       "title": "Communication Engineering II",
       "code": "EEE 4111",
@@ -885,6 +913,7 @@
       "notes": []
     },
     {
+      "id": "eee-4121-power-system-ii",
       "semester": "4th Year 1st Semester",
       "title": "Power System II",
       "code": "EEE 4121",
@@ -901,6 +930,7 @@
       "notes": []
     },
     {
+      "id": "eee-4131-digital-signal-processing",
       "semester": "4th Year 1st Semester",
       "title": "Digital Signal Processing",
       "code": "EEE 4131",
@@ -919,9 +949,24 @@
       "notes": []
     },
     {
+      "id": "eee-4141-solid-state-devices",
+      "semester": "4th Year 1st Semester",
+      "title": "Solid State Devices",
+      "code": "EEE 4141",
+      "links": {
+        "20-21": [],
+        "21-22": [],
+        "22-23": [],
+        "23-24": [],
+        "24-25": []
+      },
+      "notes": []
+    },
+    {
+      "id": "eee-41xx-elective-i",
       "semester": "4th Year 1st Semester",
       "title": "Elective I",
-      "code": "EEE 41**",
+      "code": "EEE 41XX",
       "links": {
         "20-21": [
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/Biomedical%20Engineering-p1.jpg",
@@ -937,13 +982,15 @@
       "notes": []
     },
     {
+      "id": "eee-42xx-elective-ii",
       "semester": "4th Year 2nd Semester",
-      "title": "Communication Engineering III",
-      "code": "EEE 4211",
+      "title": "Elective II",
+      "code": "EEE 42XX",
       "links": {
         "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/communication-p1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/communication-p2.jpeg"
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p1.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p2.jpeg",
+          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p3.jpeg"
         ],
         "21-22": [],
         "22-23": [],
@@ -953,6 +1000,7 @@
       "notes": []
     },
     {
+      "id": "eee-4221-power-system-protection-switchgear",
       "semester": "4th Year 2nd Semester",
       "title": "Power System Protection and Switchgear",
       "code": "EEE 4221",
@@ -971,6 +1019,7 @@
       "notes": []
     },
     {
+      "id": "eee-4231-vlsi-circuits-and-design",
       "semester": "4th Year 2nd Semester",
       "title": "VLSI Circuits and Design",
       "code": "EEE 4231",
@@ -987,15 +1036,12 @@
       "notes": []
     },
     {
+      "id": "eee-42xx-elective-iii",
       "semester": "4th Year 2nd Semester",
-      "title": "Elective II",
-      "code": "EEE 42**",
+      "title": "Elective III",
+      "code": "EEE 42XX",
       "links": {
-        "20-21": [
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p1.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p2.jpeg",
-          "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/image-processing-p3.jpeg"
-        ],
+        "20-21": [],
         "21-22": [],
         "22-23": [],
         "23-24": [],

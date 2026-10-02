@@ -22,6 +22,7 @@ collections:
             widget: "list"
             summary: "{{fields.semester}} | {{fields.title}} ({{fields.code}})"
             fields:
+              - { label: "Course ID", name: "id", widget: "string", hint: "Unique stable ID used for app navigation. Keep unique, including for electives with repeated course codes." }
               - { label: "Semester", name: "semester", widget: "string" }
               - { label: "Course Title", name: "title", widget: "string" }
               - { label: "Course Code", name: "code", widget: "string" }

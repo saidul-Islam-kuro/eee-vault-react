@@ -4,7 +4,7 @@ import { Search, ChevronDown } from "lucide-react";
 import CourseCard from "../components/CourseCard";
 import SemesterSheet from "../components/SemesterSheet";
 import { useVaultDataContext } from "../context/VaultDataContext";
-import { slugify } from "../lib/vault";
+import { getCourseId, slugify } from "../lib/vault";
 import { useAppNavigate } from "../hooks/useAppNavigate";
 
 const getStoredVaultState = () => ({
@@ -87,7 +87,7 @@ export default function Vault() {
       <div className="grid grid-cols-1 gap-6">
         {filtered.map((course, index) => (
           <CourseCard
-            key={course.code}
+            key={getCourseId(course)}
             course={course}
             index={index}
             onMissing={openUpload}
@@ -95,7 +95,7 @@ export default function Vault() {
               sessionStorage.setItem("vault.query", query);
               sessionStorage.setItem("vault.semValue", semValue);
               sessionStorage.setItem("vault.semLabel", semLabel);
-              navigate(`/viewer/${slugify(c.code)}/${slugify(batch)}`);
+              navigate(`/viewer/${slugify(getCourseId(c))}/${slugify(batch)}`);
             }}
           />
         ))}

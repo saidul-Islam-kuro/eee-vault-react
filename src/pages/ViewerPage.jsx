@@ -18,10 +18,13 @@ export default function ViewerPage() {
   const [aiOpen, setAiOpen] = useState(false);
   const [isCompiling, setIsCompiling] = useState(false);
 
-  const decodedCode = decodeURIComponent(code);
+  const decodedCourseId = decodeURIComponent(code);
   const decodedBatch = decodeURIComponent(batch);
 
-  const course = useMemo(() => courseData.find((c) => c.code === decodedCode), [courseData, decodedCode]);
+  const course = useMemo(
+    () => courseData.find((c) => c.id === decodedCourseId || c.code === decodedCourseId),
+    [courseData, decodedCourseId]
+  );
   const rawLink = course?.links ? course.links[decodedBatch] : null;
   const pages = Array.isArray(rawLink) ? rawLink : rawLink ? [rawLink] : [];
   const title = course ? `${course.title} - ${decodedBatch}` : "Paper not found";
@@ -126,7 +129,7 @@ export default function ViewerPage() {
         </div>
       </div>
 
-      <AiChatPanel open={aiOpen} onClose={() => setAiOpen(false)} pages={pages} resetKey={`${decodedCode}-${decodedBatch}`} />
+      <AiChatPanel open={aiOpen} onClose={() => setAiOpen(false)} pages={pages} resetKey={`${decodedCourseId}-${decodedBatch}`} />
 
       <ConfirmDialog
         open={confirmDialog.open}

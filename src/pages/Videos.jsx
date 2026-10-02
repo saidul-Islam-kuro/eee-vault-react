@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { PlayCircle, Video, FolderOpen, ChevronRight, ArrowLeft, Search } from "lucide-react";
 import VideoPlayer from "../components/VideoPlayer";
 import { useVaultDataContext } from "../context/VaultDataContext";
-import { slugify } from "../lib/vault";
+import { getCourseId, slugify } from "../lib/vault";
 import { normalizeYouTubeMedia } from "../lib/youtube";
 import { useAppNavigate } from "../hooks/useAppNavigate";
 
@@ -87,7 +87,10 @@ export default function VideosPage() {
     if (selectedCourseCode) {
       return (
         coursesWithVideoCount.find(
-          (course) => slugify(course.code) === selectedCourseCode || course.code === selectedCourseCode
+          (course) =>
+            slugify(getCourseId(course)) === selectedCourseCode ||
+            slugify(course.code) === selectedCourseCode ||
+            course.code === selectedCourseCode
         ) || coursesWithVideoCount[0]
       );
     }
@@ -285,9 +288,9 @@ export default function VideosPage() {
 
           return (
             <button
-              key={course.code}
+              key={getCourseId(course)}
               type="button"
-              onClick={() => navigate(`/videos/${slugify(course.code)}`)}
+              onClick={() => navigate(`/videos/${slugify(getCourseId(course))}`)}
               className="tactile group rounded-[30px] border border-black/5 bg-white/90 p-5 text-left shadow-[0_18px_40px_-30px_rgba(0,0,0,0.42)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-28px_rgba(0,0,0,0.6)]"
             >
               <div className="flex items-center justify-between gap-3">

@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, ChevronDown, FileText, Download, CloudDownload, Inbox } from "lucide-react";
 import { useVaultDataContext } from "../context/VaultDataContext";
-import { SEMESTERS, triggerDownload } from "../lib/vault";
+import { getCourseId, SEMESTERS, triggerDownload } from "../lib/vault";
 import SemesterSheet from "../components/SemesterSheet";
 import ConfirmDialog from "../components/ConfirmDialog";
 import { useConfirmDialog } from "../hooks/useConfirmDialog";
@@ -91,7 +91,7 @@ export default function Notes() {
               {group.courses.map((course) => {
                 const hasNotes = course.notes && course.notes.length > 0;
                 return (
-                  <div key={course.code} className="glass-card p-5 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.4)] border border-black/5 bg-white/90">
+                  <div key={getCourseId(course)} className="glass-card p-5 rounded-3xl shadow-[0_18px_40px_-30px_rgba(0,0,0,0.4)] border border-black/5 bg-white/90">
                     <div className="mb-3">
                       <span className="text-[10px] font-black text-[#d92a2a] bg-[#fff3f3] px-2 py-0.5 rounded uppercase border border-[#f6d7d7]">
                         {course.code}

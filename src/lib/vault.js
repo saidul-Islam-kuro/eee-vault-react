@@ -26,6 +26,10 @@ export function slugify(str) {
   return encodeURIComponent(str);
 }
 
+export function getCourseId(course) {
+  return course.id || course.code;
+}
+
 export function triggerDownload(url, fileName) {
   if (!url) return;
 
