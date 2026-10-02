@@ -37,7 +37,7 @@ function Portrait({ member, className = "" }) {
         <img
           src={member.image}
           alt={`Portrait of ${member.name}`}
-          className="h-full w-full object-cover object-center"
+          className={`h-full w-full object-cover ${member.featured ? "object-top" : "object-center"}`}
         />
       ) : (
         <div
@@ -55,8 +55,8 @@ function Portrait({ member, className = "" }) {
 
 function Profile({ member }) {
   return (
-    <article className={`group relative overflow-hidden bg-white ${member.featured ? "grid md:grid-cols-[minmax(220px,0.62fr)_1.38fr]" : ""}`}>
-      <div className={`relative overflow-hidden ${member.featured ? "min-h-[220px] md:min-h-[280px]" : "aspect-[5/4]"}`}>
+    <article className={`group relative overflow-hidden bg-white ${member.featured ? "md:grid md:grid-cols-[minmax(220px,0.62fr)_1.38fr]" : ""}`}>
+      <div className={`relative overflow-hidden ${member.featured ? "aspect-[5/4] md:aspect-auto md:min-h-[280px]" : "aspect-[5/4]"}`}>
         <Portrait member={member} className="h-full w-full transition duration-500 group-hover:scale-[1.025]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
