@@ -229,6 +229,19 @@
           "name": "Math-1111-CT(24-25)",
           "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/Math-1111CT.pdf"
         }
+      ],
+      "videos": [
+        {
+          "type": "Playlist",
+          "title": "Differential and integral Calculus",
+          "classes": [
+            {
+              "type": "playlists",
+              "title": "Domain & Range to Maxima minima Playlist",
+              "videoId": "jp2R5S1LcWE"
+            }
+          ]
+        }
       ]
     },
     {
