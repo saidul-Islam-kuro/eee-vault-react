@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Library, NotebookPen, PlaySquare, UserRound } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Library, NotebookPen, PlaySquare, UserRound, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DIRECTORY_ITEMS = [
@@ -33,7 +33,7 @@ const DIRECTORY_ITEMS = [
   {
     to: "/developer",
     label: "About the developer",
-    caption: "Meet the student behind EEE Study Hub",
+    caption: "Meet Saidul, the developer behind EEE Vault",
     icon: UserRound,
     accent: "from-[#d92a2a] to-[#a61414]",
   },
@@ -74,7 +74,7 @@ export default function Home() {
 
         <Link
           to="/developer"
-          className="tactile absolute bottom-0 right-0 inline-flex items-center gap-2 rounded-tl-2xl rounded-br-[32px] bg-[#d92a2a] px-6 py-3.5 text-sm font-black text-white shadow-[0_-8px_24px_-12px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f]"
+          className="tactile absolute bottom-0 right-0 inline-flex items-center gap-2 rounded-tl-2xl rounded-br-[32px] bg-[#d92a2a] px-6 py-3.5 text-sm font-black text-white shadow-[0_-8px_24px_-12px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d92a2a]"
         >
           <UserRound size={17} strokeWidth={2.5} /> About the developer <ArrowRight size={16} />
         </Link>
@@ -83,7 +83,12 @@ export default function Home() {
       <section className="mt-8">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-xl font-black tracking-[-0.04em] text-black">Explore</h2>
-          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-black/50">Directory</span>
+          <Link
+            to="/behind-the-app"
+            className="tactile inline-flex items-center gap-2 rounded-full bg-[#d92a2a] px-4 py-2.5 text-xs font-black text-white shadow-[0_10px_24px_-14px_rgba(217,42,42,0.8)] transition hover:bg-[#b51f1f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d92a2a]"
+          >
+            <UsersRound size={15} /> Behind the app <ArrowRight size={14} />
+          </Link>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">

@@ -8,6 +8,7 @@ import Library from "./pages/Library";
 import VideosPage from "./pages/Videos";
 import ViewerPage from "./pages/ViewerPage";
 import DeveloperProfile from "./pages/DeveloperProfile";
+import BehindTheApp from "./pages/BehindTheApp";
 import { VaultDataContext } from "./context/VaultDataContext";
 import { useVaultData } from "./hooks/useVaultData";
 
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/viewer/:code/:batch" element={<ViewerPage />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/behind-the-app" element={<BehindTheApp />} />
           <Route path="/developer" element={<DeveloperProfile />} />
           <Route path="/vault" element={<Vault />} />
           <Route path="/videos" element={<VideosPage />} />
