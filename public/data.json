@@ -552,7 +552,7 @@
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P1.jpeg",
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-20-21/main/MECHANICAL-P2.jpeg"
         ],
-        "21-22": [],
+        "21-22": ["https://github.com/saidul-Islam-kuro/Library/blob/main/Basic%20Mech.%20Engg.%20%E2%80%94%201.pdf"],
         "22-23": [
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p1.jpg",
           "https://raw.githubusercontent.com/KURO-RGBN/EEE-SESSION-22-23/main/Basic%20Mechanical%20Engineering-p2.jpg"
@@ -560,19 +560,12 @@
         "23-24": [],
         "24-25": []
       },
-<<<<<<< HEAD
-      "notes": [ {
-          "name": "Lecture Note-01(rezwan sir)",
-          "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Basic%20Mech.%20Engg.%20%E2%80%94%201.pdf"
-        }],
-      "videos": [
-=======
       "notes": [
->>>>>>> a606e0ee06d35dae31d8a3acaf0c28772a70b7f5
         {
-          "name": "Lecture 1 ",
+          "name": "Lecture Note-01 (rezwan sir)",
           "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Basic%20Mech.%20Engg.%20%E2%80%94%201.pdf"
         }
+        
       ],
       "videos": []
     },

@@ -63,10 +63,14 @@ export function normalizeGitHubBlobUrl(value) {
   return `https://raw.githubusercontent.com/${owner}/${repository.replace(/\.git$/i, "")}/${branch}/${path.join("/")}`;
 }
 
-export function triggerDownload(url, fileName) {
-  if (!url) return;
+export async function triggerDownload(url, fileName) {
+  if (!url) {
+    window.alert("This file doesn't have a download URL.");
+    return false;
+  }
 
   const safeName = (fileName || "download.pdf").replace(/[\\/:*?"<>|]+/g, "_");
+  const downloadUrl = normalizeGitHubBlobUrl(url);
 
   const triggerAnchor = (targetUrl) => {
     const a = document.createElement("a");
@@ -75,60 +79,41 @@ export function triggerDownload(url, fileName) {
     a.rel = "noopener";
     a.style.display = "none";
     document.body.appendChild(a);
-
-    try {
-      a.click();
-    } catch {
-      // no-op
-    }
-
+    a.click();
     setTimeout(() => {
-      try {
-        document.body.removeChild(a);
-      } catch {
-        // no-op
-      }
+      document.body.removeChild(a);
     }, 1200);
   };
 
-  const isRemoteAsset = /^https?:\/\//i.test(url);
+  const isRemoteAsset = /^https?:\/\//i.test(downloadUrl);
 
   if (isRemoteAsset) {
-    fetch(url, { mode: "cors", credentials: "omit" })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Download request failed: ${response.status}`);
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        const blobUrl = URL.createObjectURL(blob);
-        triggerAnchor(blobUrl);
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
-      })
-      .catch(() => {
-        const fallback = document.createElement("a");
-        fallback.href = url;
-        fallback.download = safeName;
-        fallback.target = "_blank";
-        fallback.rel = "noopener";
-        fallback.style.display = "none";
-        document.body.appendChild(fallback);
-        try {
-          fallback.click();
-        } catch {
-          window.location.href = url;
-        }
-        setTimeout(() => {
-          try {
-            document.body.removeChild(fallback);
-          } catch {
-            // no-op
-          }
-        }, 1200);
-      });
-    return;
+    try {
+      const response = await fetch(downloadUrl, { mode: "cors", credentials: "omit" });
+      if (!response.ok) {
+        throw new Error(`Download request failed: ${response.status}`);
+      }
+      const blob = await response.blob();
+      if (blob.size === 0) {
+        throw new Error("The downloaded file was empty.");
+      }
+      const blobUrl = URL.createObjectURL(blob);
+      triggerAnchor(blobUrl);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 60_000);
+      return true;
+    } catch (error) {
+      console.error("Document download failed.", error);
+      window.alert("Couldn't download this file. Make sure the GitHub repository is public and try again.");
+      return false;
+    }
   }
 
-  triggerAnchor(url);
+  try {
+    triggerAnchor(downloadUrl);
+    return true;
+  } catch (error) {
+    console.error("Document download failed.", error);
+    window.alert("Couldn't start the download. Please try again.");
+    return false;
+  }
 }
