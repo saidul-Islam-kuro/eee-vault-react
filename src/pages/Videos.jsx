@@ -164,7 +164,7 @@ export default function VideosPage() {
         <div className="flex items-center justify-between gap-3">
           <button
             type="button"
-            onClick={() => navigate("/videos")}
+            onClick={() => navigate("/videos", { replace: true })}
             className="tactile inline-flex items-center gap-2 rounded-full border border-black/5 bg-white px-3 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-black/65"
           >
             <ArrowLeft size={14} />

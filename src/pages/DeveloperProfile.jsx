@@ -27,7 +27,7 @@ const CONTACT_LINKS = [
 export default function DeveloperProfile() {
   return (
     <div className="page-shell mx-auto max-w-4xl">
-      <Link to="/" className="tactile mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-bold text-black/75 shadow-sm hover:text-[#d92a2a]">
+      <Link to="/" replace className="tactile mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm font-bold text-black/75 shadow-sm hover:text-[#d92a2a]">
         <ArrowLeft size={16} /> Home
       </Link>
 
