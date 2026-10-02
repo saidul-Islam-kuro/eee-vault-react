@@ -524,7 +524,25 @@
         "23-24": [],
         "24-25": []
       },
-      "notes": []
+      "notes": [],
+      "videos": [
+        {
+          "type": "Playlist",
+          "title": "DC Machine",
+          "classes": [
+            {
+              "type": "Playlist",
+              "title": "DC Generator Playlist",
+              "videoId": "https://youtube.com/playlist?list=PLho7ncbqgQbsWJgoVF3N_YrdSKThT4QY8&si=o_F6nXnzkgFZxWdN"
+            },
+            {
+              "type": "Playlist",
+              "title": "DC Motor playlist",
+              "videoId": "https://youtube.com/playlist?list=PLgwYQr3eNLsrczstifgHqtVwHHnjZkkfF&si=HZfAaPnaM4pdYjFe"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "math-2111-differential-equation-laplace-fourier",
