@@ -16,6 +16,7 @@ const CORE_TEAM = [
     name: "Alim Hossain Salman",
     role: "Team lead",
     batch: "EEE · Batch 03",
+    image: "/salmanvai.jpg",
     bio: "Helped lead the team and keep the work moving toward a resource students can use in their everyday studies.",
     note: "The best part is knowing these resources can help the next student who needs them.",
   },
@@ -150,7 +151,7 @@ export default function BehindTheApp() {
       <section className="mt-10" aria-labelledby="production-heading">
         <SectionTitle note="EEE · 3rd batch">Production aid</SectionTitle>
         <div className="grid max-w-2xl overflow-hidden rounded-[22px] border border-black/[0.08] bg-white shadow-[0_18px_44px_-36px_rgba(0,0,0,0.55)] sm:grid-cols-[200px_1fr]">
-          <Portrait member={{ name: "Abdullah Al Minhaz" }} className="aspect-[5/3] sm:aspect-auto sm:min-h-[170px]" />
+          <Portrait member={{ name: "Abdullah Al Minhaz", image: "/minhazvai.jpg" }} className="aspect-[5/3] sm:aspect-auto sm:min-h-[170px]" />
           <div className="flex items-center p-5 md:p-7">
             <div>
               <p className="text-sm font-bold text-[#b51f1f]">Production aid</p>
@@ -161,23 +162,55 @@ export default function BehindTheApp() {
         </div>
       </section>
 
+      <section className="relative mt-10 overflow-hidden rounded-[28px] border border-[#c7a96b]/35 bg-[#211d1b] px-6 py-10 text-center text-white shadow-[0_26px_60px_-34px_rgba(0,0,0,0.7)] md:px-12 md:py-14" aria-labelledby="tribute-heading">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7bd82] to-transparent" />
+          <div className="absolute -left-28 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full border border-[#d7bd82]/40" />
+          <div className="absolute -right-28 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full border border-[#d7bd82]/40" />
+        </div>
+        <div className="relative mx-auto max-w-2xl">
+          <p className="text-xs font-bold tracking-[0.22em] text-[#e1c98f]">WITH EARNEST GRATITUDE</p>
+          <div className="mx-auto mt-6 h-36 w-36 rounded-full border border-[#d7bd82] p-1.5 shadow-[0_0_0_8px_rgba(215,189,130,0.08)] md:h-40 md:w-40">
+            <img
+              src="/MD.%20Shizer%20Rahman.jpg"
+              alt="MD. Shizer Rahman"
+              className="h-full w-full rounded-full object-cover object-center"
+            />
+          </div>
+          <h2 id="tribute-heading" className="mt-7 text-3xl font-black tracking-[-0.045em] md:text-4xl">
+            A tribute to our teacher
+          </h2>
+          <p className="mt-3 text-xl font-semibold text-[#e1c98f]">MD. Shizer Rahman</p>
+          <p className="mt-2 text-sm font-medium leading-6 text-white/75">
+            Chairman, Department of Electrical and Electronic Engineering
+          </p>
+          <div className="mx-auto mt-5 h-px w-16 bg-[#d7bd82]/70" />
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/75 md:text-base">
+            Our heartfelt thanks to Sir for his guidance and generous support. Without his help, this project would not have been successful.
+          </p>
+        </div>
+      </section>
+
       <section className="mt-10" aria-labelledby="resources-heading">
         <div className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white shadow-[0_20px_46px_-34px_rgba(0,0,0,0.35)]">
           <div className="bg-[#f3f0ec] px-6 py-6 text-[#191716] md:px-8">
-            <div className="flex items-center gap-2 text-[#b51f1f]">
-              <UsersRound size={18} />
-              <span className="text-sm font-semibold text-black/60">Collecting and organizing study materials</span>
-            </div>
-            <h2 id="resources-heading" className="mt-3 text-2xl font-black tracking-[-0.05em]">Resource management</h2>
+            <h2 id="resources-heading" className="text-2xl font-black tracking-[-0.05em]">Resource management</h2>
           </div>
           <div className="grid gap-3 bg-[#faf9f7] p-3 sm:grid-cols-2 md:p-4">
             {[
-              { name: "Mohiuddin Rifat", batch: "EEE · Batch 04" },
-              { name: "Dhruvo Acharjee", batch: "EEE · Batch 05" },
+              { name: "Mohiuddin Rifat", batch: "EEE · Batch 04", image: "/mohiuddin%20rifat.jpg" },
+              { name: "Dhruvo Acharjee", batch: "EEE · Batch 05", image: "/Dhruvo%20acharjee.jpg" },
             ].map((member) => (
-              <div key={member.name} className="rounded-[16px] border border-black/[0.06] bg-white px-5 py-5 shadow-[0_8px_20px_-16px_rgba(0,0,0,0.35)]">
-                <p className="text-lg font-bold text-black">{member.name}</p>
-                <p className="mt-1 text-sm text-black/55">{member.batch}</p>
+              <div key={member.name} className="flex items-center gap-4 rounded-[16px] border border-black/[0.06] bg-white px-5 py-4 shadow-[0_8px_20px_-16px_rgba(0,0,0,0.35)]">
+                <img
+                  src={member.image}
+                  alt=""
+                  className="h-14 w-14 shrink-0 rounded-full border border-black/10 object-cover object-center"
+                />
+                <div>
+                  <p className="text-lg font-bold text-black">{member.name}</p>
+                  <p className="mt-1 text-sm text-black/55">{member.batch}</p>
+                </div>
               </div>
             ))}
           </div>
