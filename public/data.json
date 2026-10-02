@@ -163,6 +163,29 @@
           "name": "ENGLISH NOTES",
           "url": "https://raw.githubusercontent.com/KURO-RGBN/NOTES-STORAGE-01/main/English_Note.pdf"
         }
+      ],
+      "videos": [
+        {
+          "type": "Playlist",
+          "title": "Module 01- Writing Part",
+          "classes": [
+            {
+              "type": "Lecture",
+              "title": "Essay Writing",
+              "videoId": "QyDCX771wKs"
+            },
+            {
+              "type": "Lecture",
+              "title": "Research paper writing",
+              "videoId": "k4iCQt46peo"
+            },
+            {
+              "type": "Lecture",
+              "title": "Paragraph writing",
+              "videoId": "eT7W7Dy8wVk"
+            }
+          ]
+        }
       ]
     },
     {
