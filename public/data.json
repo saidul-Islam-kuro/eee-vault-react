@@ -70,8 +70,8 @@
       ],
       "videos": [
         {
-          "title": "Module 01: Basic Concepts & Laws",
-          "playlistId": "",
+          "title": "Module 01: Basic Concepts & Laws(every concepts)",
+          "playlistId": "PLeZJy4pEsp",
           "type": "Playlist",
           "classes": []
         },
@@ -79,12 +79,12 @@
           "title": "Module 2: Network Analysis",
           "classes": [
             {
-              "title": "Lecture 3 - KCL and KVL",
+              "title": "KCL and KVL",
               "videoId": "a2tmHmIQ3hw",
               "type": "Lecture"
             },
             {
-              "title": "Lecture 4 - Mesh  Analysis",
+              "title": " Mesh  Analysis",
               "playlistId": "PLBlnK6fEyqRhCuQsNsNXFlCNa_5_jnm1a",
               "type": "Playlist",
               "videoId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF"
@@ -93,6 +93,32 @@
               "type": "playlist",
               "title": "Nodal Analysis",
               "videoId": "PLBlnK6fEyqRhq60Lkn3hM51_QQ0J97pMF"
+            }
+          ]
+        },
+        {
+          "type": "Playlist",
+          "title": "Module 3: Circuit Theorem",
+          "classes": [
+            {
+              "type": "Lecture",
+              "title": "Superposition",
+              "videoId": "AQh_t6efQus"
+            },
+            {
+              "type": "Lecture",
+              "title": "Thevenin",
+              "videoId": "EutdwX7bNHA"
+            },
+            {
+              "type": "Lecture",
+              "title": "Norton",
+              "videoId": "-kkvqr1wSwA"
+            },
+            {
+              "type": "Lecture",
+              "title": "Maximum Power",
+              "videoId": "GArCS_3BDxg"
             }
           ]
         }
