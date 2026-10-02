@@ -171,8 +171,8 @@ export default function VideosPage() {
           </div>
 
           {activeVideo ? (
-            <div className="grid gap-5 xl:grid-cols-[1.7fr_0.9fr]">
-              <div>
+            <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1.7fr)_minmax(0,0.9fr)]">
+              <div className="min-w-0">
                 <VideoPlayer
                   videoId={activeVideo.videoId}
                   playlistId={activeVideo.playlistId}
@@ -183,7 +183,7 @@ export default function VideosPage() {
                     <FolderOpen size={12} />
                     {activeVideo.moduleTitle}
                   </div>
-                  <h4 className="mt-2 text-lg font-black tracking-[-0.04em] text-black">{activeVideo.title}</h4>
+                  <h4 className="mt-2 break-words text-lg font-black tracking-[-0.04em] text-black [overflow-wrap:anywhere]">{activeVideo.title}</h4>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ export default function VideosPage() {
                               key={item.key || `${selectedCourse.code}-${item.title}`}
                               type="button"
                               onClick={() => setActiveMediaKey(item.key)}
-                              className={`flex w-full items-center gap-3 rounded-2xl border p-3 text-left transition ${
+                              className={`flex w-full min-w-0 items-start gap-3 rounded-2xl border p-3 text-left transition ${
                                 selected
                                   ? "border-[#f0b0b0] bg-[#fff3f3]"
                                   : "border-black/5 bg-white"
@@ -217,12 +217,12 @@ export default function VideosPage() {
                                 <PlayCircle size={16} />
                               </div>
                               <div className="min-w-0 flex-1">
-                                <p className="truncate text-sm font-bold text-black">{item.title}</p>
+                                <p className="break-words text-sm font-bold text-black [overflow-wrap:anywhere]">{item.title}</p>
                                 <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-black/45">
                                   {item.type || "Lecture"}
                                 </p>
                               </div>
-                              <ChevronRight size={16} className="text-black/30" />
+                              <ChevronRight size={16} className="mt-1 shrink-0 text-black/30" />
                             </button>
                           );
                         })}
