@@ -53,8 +53,8 @@ function Portrait({ member, className = "" }) {
 
 function Profile({ member }) {
   return (
-    <article className={`group relative overflow-hidden bg-white ${member.featured ? "grid md:grid-cols-[0.92fr_1.08fr]" : ""}`}>
-      <div className={`relative overflow-hidden ${member.featured ? "min-h-[280px] md:min-h-[360px]" : "aspect-[5/4]"}`}>
+    <article className={`group relative overflow-hidden bg-white ${member.featured ? "grid md:grid-cols-[minmax(220px,0.62fr)_1.38fr]" : ""}`}>
+      <div className={`relative overflow-hidden ${member.featured ? "min-h-[220px] md:min-h-[280px]" : "aspect-[5/4]"}`}>
         <Portrait member={member} className="h-full w-full transition duration-500 group-hover:scale-[1.025]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
@@ -155,20 +155,20 @@ export default function BehindTheApp() {
       </section>
 
       <section className="mt-10" aria-labelledby="resources-heading">
-        <div className="overflow-hidden rounded-[24px] bg-[#b51f1f] p-1 shadow-[0_20px_46px_-30px_rgba(130,20,20,0.55)]">
-          <div className="rounded-t-[21px] bg-[#211d1b] px-6 py-6 text-white md:px-8">
-            <div className="flex items-center gap-2 text-[#ff8a81]">
+        <div className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white shadow-[0_20px_46px_-34px_rgba(0,0,0,0.35)]">
+          <div className="bg-[#f3f0ec] px-6 py-6 text-[#191716] md:px-8">
+            <div className="flex items-center gap-2 text-[#b51f1f]">
               <UsersRound size={18} />
-              <span className="text-sm font-semibold">Collecting and organizing study materials</span>
+              <span className="text-sm font-semibold text-black/60">Collecting and organizing study materials</span>
             </div>
             <h2 id="resources-heading" className="mt-3 text-2xl font-black tracking-[-0.05em]">Resource management</h2>
           </div>
-          <div className="grid gap-3 bg-[#b51f1f] p-3 sm:grid-cols-2 md:p-4">
+          <div className="grid gap-3 bg-[#faf9f7] p-3 sm:grid-cols-2 md:p-4">
             {[
               { name: "Mohiuddin Rifat", batch: "EEE · Batch 04" },
               { name: "Dhruvo Acharjee", batch: "EEE · Batch 05" },
             ].map((member) => (
-              <div key={member.name} className="rounded-[16px] bg-white px-5 py-5 shadow-[0_8px_20px_-16px_rgba(0,0,0,0.55)]">
+              <div key={member.name} className="rounded-[16px] border border-black/[0.06] bg-white px-5 py-5 shadow-[0_8px_20px_-16px_rgba(0,0,0,0.35)]">
                 <p className="text-lg font-bold text-black">{member.name}</p>
                 <p className="mt-1 text-sm text-black/55">{member.batch}</p>
               </div>
