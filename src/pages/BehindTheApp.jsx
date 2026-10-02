@@ -205,7 +205,7 @@ export default function BehindTheApp() {
         <ul className="divide-y divide-black/10 border-y border-black/10">
           {[ {name: "Mohiuddin Rifat", batch: "EEE · Batch 04", note: "Provided Initial Resources"},
             { name: "Abdullah Al Minhaz", batch: "EEE · Batch 03", note: "Helped Publishing the App"},
-            { name: "Tanvir Ahmed", batch: "EEE · Batch 02", note: "Provided valuable feedback"},
+            { name: "MD.Tanvir", batch: "EEE · Batch 02", note: "Provided valuable feedback"},
             { name: "Sabbir Khandakar Saykat", batch: "EEE · Batch 04", note: "Assisted with Resources"},
             { name: "Dhruvo Acharjee", batch: "EEE · Batch 05", note: "Assisted with resources" },
           ].map((member) => (
