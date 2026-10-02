@@ -21,7 +21,7 @@ const SOCIAL_LINKS = [
 const CONTACT_LINKS = [
   { label: "Email", value: "saidulkuro@gmail.com", href: "mailto:saidulkuro@gmail.com", icon: Mail },
   { label: "Phone", value: "01647843565", href: "tel:+8801647843565", icon: Phone },
-  { label: "WhatsApp", value: "Message me", href: "https://wa.me/8801647843565", icon: Phone },
+  { label: "WhatsApp", value: "Message me", href: "https://wa.me/8801517816127", icon: Phone },
 ];
 
 export default function DeveloperProfile() {
