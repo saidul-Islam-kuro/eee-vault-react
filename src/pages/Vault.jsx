@@ -24,11 +24,6 @@ export default function Vault() {
   const [semLabel, setSemLabel] = useState(initialState.semLabel);
   const [semSheetOpen, setSemSheetOpen] = useState(false);
 
-  const saveVaultScroll = () => {
-    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    sessionStorage.setItem("vaultScroll", String(scrollTop));
-  };
-
   useEffect(() => {
     sessionStorage.setItem("vault.query", query);
   }, [query]);
@@ -37,33 +32,6 @@ export default function Vault() {
     sessionStorage.setItem("vault.semValue", semValue);
     sessionStorage.setItem("vault.semLabel", semLabel);
   }, [semValue, semLabel]);
-
-  useEffect(() => {
-    if (status !== "ready") return;
-
-    const savedScroll = Number(sessionStorage.getItem("vaultScroll") || 0);
-
-    if (!Number.isFinite(savedScroll) || savedScroll <= 0) return;
-
-    const restoreScroll = () => {
-      document.body.scrollTop = savedScroll;
-      document.documentElement.scrollTop = savedScroll;
-    };
-
-    requestAnimationFrame(restoreScroll);
-    const timeoutId = window.setTimeout(restoreScroll, 150);
-
-    return () => window.clearTimeout(timeoutId);
-  }, [status]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      saveVaultScroll();
-    };
-
-    document.body.addEventListener("scroll", handleScroll, { passive: true });
-    return () => document.body.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase();
@@ -124,7 +92,6 @@ export default function Vault() {
             index={index}
             onMissing={openUpload}
             onOpenPaper={(c, batch) => {
-              saveVaultScroll();
               sessionStorage.setItem("vault.query", query);
               sessionStorage.setItem("vault.semValue", semValue);
               sessionStorage.setItem("vault.semLabel", semLabel);

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Vault from "./pages/Vault";
@@ -24,6 +24,48 @@ function AdminRedirect() {
   );
 }
 
+function getPageScrollTop() {
+  return document.body.scrollTop || document.documentElement.scrollTop;
+}
+
+function RouteScrollManager() {
+  const { pathname } = useLocation();
+  const activePath = useRef(pathname);
+  const latestScroll = useRef(0);
+
+  useLayoutEffect(() => {
+    const scrollKey = (path) => `eee-vault:scroll:${path}`;
+    const previousPath = activePath.current;
+    const currentScroll = getPageScrollTop();
+
+    if (previousPath !== pathname) {
+      sessionStorage.setItem(scrollKey(previousPath), String(latestScroll.current || currentScroll));
+    }
+
+    activePath.current = pathname;
+    const storedScroll = sessionStorage.getItem(scrollKey(pathname));
+    const legacyVaultScroll = pathname === "/vault" ? sessionStorage.getItem("vaultScroll") : null;
+    const savedScroll = Number(storedScroll ?? legacyVaultScroll ?? 0);
+    const restoredScroll = Number.isFinite(savedScroll) ? savedScroll : 0;
+
+    latestScroll.current = restoredScroll;
+    document.body.scrollTop = restoredScroll;
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = getPageScrollTop();
+      latestScroll.current = scrollTop;
+      sessionStorage.setItem(`eee-vault:scroll:${activePath.current}`, String(scrollTop));
+    };
+
+    document.body.addEventListener("scroll", handleScroll, { passive: true });
+    return () => document.body.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return null;
+}
+
 export default function App() {
   const vaultData = useVaultData();
 
@@ -35,6 +77,7 @@ export default function App() {
 
   return (
     <VaultDataContext.Provider value={vaultData}>
+      <RouteScrollManager />
       <Routes>
         <Route path="/admin" element={<AdminRedirect />} />
         <Route path="/admin/*" element={<AdminRedirect />} />
