@@ -501,7 +501,12 @@
         "23-24": [],
         "24-25": []
       },
-      "notes": [],
+      "notes": [
+        {
+          "name": "Machine Slide-Mahfuz sir",
+          "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Machine.pdf"
+        }
+      ],
       "videos": [
         {
           "type": "Playlist",
