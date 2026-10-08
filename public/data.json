@@ -596,7 +596,25 @@
         "23-24": [],
         "24-25": []
       },
-      "notes": []
+      "notes": [
+        {
+          "name": "Laplace Transform-Sajib sir",
+          "url": "https://github.com/saidul-Islam-kuro/Library/blob/main/Laplace%20transform%20(LEC%2013%20to%2016)%20class%20test%20-02.pdf"
+        }
+      ],
+      "videos": [
+        {
+          "type": "Playlist",
+          "title": "Laplace Transform",
+          "classes": [
+            {
+              "type": "playlist",
+              "videoId": "https://youtube.com/playlist?list=PL_lu-ITz1ER8YjJS7YixKCl7hwTcxbkKJ&si=aY1it4d_x5JPpPoD",
+              "title": "Full laplace playlist"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "eee-2113-engineering-materials",
